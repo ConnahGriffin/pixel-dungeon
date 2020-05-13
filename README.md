@@ -1,9 +1,13 @@
 Pixel Dungeon
 =============
 
-This is a fork of Watabou's Pixel Dungeon. This repo adds no new features,
-but aims to make setting up Pixel Dungeon a much easier process which everyone
-can easilly build off.
+This is a fork of Watabou's Pixel Dungeon by mdsimmo which was the forked by me. This repo was made for a college project,
+The additonal features added includes...
+1. Extra levels (work in progress)
+2. Weapons/Armours (work in progress)
+3. An almaniac for mob/items etc (work in progress)
+4. A more visually pleasing diplay for hunger. (work in progress)
+5. A stat comparison pup-up for items. (work in progress)
 
 To setup Pixel Dungeon:
 
@@ -15,7 +19,7 @@ To setup Pixel Dungeon:
 
 Note that the PD-classes library is included as a submodule in the 'game-engine' directory. 
 If you want to make changes to that library, you'll need to fork the PD-classes library
-found here: https://github.com/mdsimmo/PD-classes
+found here: https://github.com/ConnahGriffin/PD-classes
 
 ## What's different?
 
