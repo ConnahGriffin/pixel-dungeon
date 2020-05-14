@@ -55,7 +55,7 @@ public class Flare extends Visual {
 		
 		super( 0, 0, 0, 0 );
 		
-		int gradient[] = {0xFFFFFFFF, 0x00FFFFFF};
+		int[] gradient = {0xFFFFFFFF, 0x00FFFFFF};
 		texture = new Gradient( gradient );
 		
 		this.nRays = nRays;
@@ -73,7 +73,7 @@ public class Flare extends Visual {
 			order( ByteOrder.nativeOrder() ).
 			asShortBuffer();
 		
-		float v[] = new float[4];
+		float[] v = new float[4];
 		
 		v[0] = 0;
 		v[1] = 0;

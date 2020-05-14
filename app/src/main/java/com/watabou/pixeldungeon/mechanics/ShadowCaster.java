@@ -29,7 +29,7 @@ public final class ShadowCaster {
 	private static final int HEIGHT	= Level.HEIGHT;
 	
 	private static int distance;
-	private static int limits[];
+	private static int[] limits;
 	
 	private static boolean[] losBlocking;
 	private static boolean[] fieldOfView;

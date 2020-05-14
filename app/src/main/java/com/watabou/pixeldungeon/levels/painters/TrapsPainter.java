@@ -31,7 +31,7 @@ public class TrapsPainter extends Painter {
 
 	public static void paint( Level level, Room room ) {
 		 
-		Integer traps[] = {
+		Integer[] traps = {
 			Terrain.TOXIC_TRAP, Terrain.TOXIC_TRAP, Terrain.TOXIC_TRAP, 
 			Terrain.PARALYTIC_TRAP, Terrain.PARALYTIC_TRAP, 
 			!Dungeon.bossLevel( Dungeon.depth + 1 ) ? Terrain.CHASM : Terrain.SUMMONING_TRAP };

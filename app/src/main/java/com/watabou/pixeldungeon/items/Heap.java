@@ -283,7 +283,7 @@ public class Heap implements Bundlable {
 		CellEmitter.get( pos ).burst( Speck.factory( Speck.BUBBLE ), 3 );
 		Splash.at( pos, 0xFFFFFF, 3 );
 		
-		float chances[] = new float[items.size()];
+		float[] chances = new float[items.size()];
 		int count = 0;
 		
 		int index = 0;

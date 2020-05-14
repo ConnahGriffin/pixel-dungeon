@@ -313,7 +313,7 @@ public class WndBag extends WndTabbed {
 		private Item item;
 		private ColorBlock bg;
 		
-		private ColorBlock durability[];
+		private ColorBlock[] durability;
 		
 		public ItemButton( Item item ) {
 			
