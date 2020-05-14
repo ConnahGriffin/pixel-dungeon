@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon;
 
+import android.annotation.SuppressLint;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -360,7 +362,8 @@ public class Dungeon {
 		}
 	}
 	
-	public static void saveGame( String fileName ) throws IOException {
+	@SuppressLint("DefaultLocale")
+	public static void saveGame(String fileName ) throws IOException {
 		try {
 			Bundle bundle = new Bundle();
 			
@@ -369,7 +372,7 @@ public class Dungeon {
 			bundle.put( HERO, hero );
 			bundle.put( GOLD, gold );
 			bundle.put( DEPTH, depth );
-			
+
 			for (int d : droppedItems.keyArray()) {
 				bundle.put( String.format( DROPPED, d ), droppedItems.get( d ) );
 			}
@@ -380,7 +383,7 @@ public class Dungeon {
 			bundle.put( DV, dewVial );
 			
 			int count = 0;
-			int ids[] = new int[chapters.size()];
+			int[] ids = new int[chapters.size()];
 			for (Integer id : chapters) {
 				ids[count++] = id;
 			}
@@ -453,7 +456,8 @@ public class Dungeon {
 		loadGame( fileName, false );
 	}
 	
-	public static void loadGame( String fileName, boolean fullLoad ) throws IOException {
+	@SuppressLint("DefaultLocale")
+	public static void loadGame(String fileName, boolean fullLoad ) throws IOException {
 		
 		Bundle bundle = gameBundle( fileName );
 		
@@ -478,7 +482,7 @@ public class Dungeon {
 		
 		if (fullLoad) {
 			chapters = new HashSet<Integer>();
-			int ids[] = bundle.getIntArray( CHAPTERS );
+			int[] ids = bundle.getIntArray( CHAPTERS );
 			if (ids != null) {
 				for (int id : ids) {
 					chapters.add( id );
@@ -544,7 +548,8 @@ public class Dungeon {
 		InputStream input = Game.instance.openFileInput( Utils.format( depthFile( cl ), depth ) ) ;
 		Bundle bundle = Bundle.read( input );
 		input.close();
-		
+
+		assert bundle != null;
 		return (Level)bundle.get( "level" );
 	}
 	
@@ -615,7 +620,7 @@ public class Dungeon {
 	
 	private static boolean[] passable = new boolean[Level.LENGTH];
 	
-	public static int findPath( Char ch, int from, int to, boolean pass[], boolean[] visible ) {
+	public static int findPath(Char ch, int from, int to, boolean[] pass, boolean[] visible ) {
 		
 		if (Level.adjacent( from, to )) {
 			return Actor.findChar( to ) == null && (pass[to] || Level.avoid[to]) ? to : -1;
@@ -640,7 +645,7 @@ public class Dungeon {
 		
 	}
 	
-	public static int flee( Char ch, int cur, int from, boolean pass[], boolean[] visible ) {
+	public static int flee(Char ch, int cur, int from, boolean[] pass, boolean[] visible ) {
 		
 		if (ch.flying) {
 			BArray.or( pass, Level.avoid, passable );

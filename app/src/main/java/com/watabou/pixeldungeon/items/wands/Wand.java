@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import android.annotation.SuppressLint;
+
 import java.util.ArrayList;
 
 import com.watabou.noosa.audio.Sample;
@@ -263,6 +265,7 @@ public abstract class Wand extends KindOfWeapon {
 		return isKnown() ? name : wood + " wand";
 	}
 	
+	@SuppressLint("DefaultLocale")
 	@Override
 	public String info() {
 		StringBuilder info = new StringBuilder( isKnown() ? desc() : String.format( TXT_WOOD, wood ) );
@@ -272,7 +275,7 @@ public abstract class Wand extends KindOfWeapon {
 				int min = min();
 				info.append( String.format( TXT_DAMAGE, min + (max() - min) / 2 ) );
 			} else {
-				info.append(  String.format( TXT_WEAPON ) );
+				info.append(TXT_WEAPON);
 			}
 		}
 		return info.toString();
@@ -329,10 +332,7 @@ public abstract class Wand extends KindOfWeapon {
 	}
 	
 	@Override
-	public int min() {
-		int tier = 1 + effectiveLevel() / 3;
-		return tier;
-	}
+	public int min() { return 1 + effectiveLevel() / 3; }
 	
 	@Override
 	public int max() {
