@@ -122,11 +122,8 @@ public class Fireball extends Component {
 	public static class Flame extends Image {
 		
 		private static float LIFESPAN	= 1f;
-		
-		private static float SPEED	= -40f;
-		private static float ACC	= -20f;
-		
-		private float timeLeft;
+
+        private float timeLeft;
 		
 		public Flame() {
 			
@@ -134,13 +131,15 @@ public class Fireball extends Component {
 			
 			frame( Random.Int( 2 ) == 0 ? FLAME1 : FLAME2 );
 			origin.set( width / 2, height / 2 );
-			acc.set( 0, ACC );
+            float ACC = -20f;
+            acc.set( 0, ACC);
 		}
 		
 		public void reset() {
 			revive();
 			timeLeft = LIFESPAN;
-			speed.set( 0, SPEED );
+            float SPEED = -40f;
+            speed.set( 0, SPEED);
 		}
 		
 		@Override

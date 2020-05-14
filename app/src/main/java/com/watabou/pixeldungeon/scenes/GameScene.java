@@ -91,15 +91,11 @@ public class GameScene extends PixelScene {
 	private SkinnedBlock water;
 	private DungeonTilemap tiles;
 	private FogOfWar fog;
-	private HeroSprite hero;
-	
+
 	private GameLog log;
-	
-	private BusyIndicator busy;
-	
+
 	private static CellSelector cellSelector;
-	
-	private Group terrain;
+
 	private Group ripples;
 	private Group plants;
 	private Group heaps;
@@ -126,8 +122,8 @@ public class GameScene extends PixelScene {
 		
 		scene = this;
 
-		terrain = new Group();
-		add( terrain );
+		Group terrain = new Group();
+		add(terrain);
 		
 		water = new SkinnedBlock( 
 			Level.WIDTH * DungeonTilemap.SIZE, 
@@ -197,11 +193,11 @@ public class GameScene extends PixelScene {
 		add( statuses );
 		
 		add( emoicons );
-		
-		hero = new HeroSprite();
+
+		HeroSprite hero = new HeroSprite();
 		hero.place( Dungeon.hero.pos );
 		hero.updateArmor();
-		mobs.add( hero );
+		mobs.add(hero);
 
 		add( new HealthIndicator() );
 		
@@ -228,17 +224,17 @@ public class GameScene extends PixelScene {
 		log.camera = uiCamera;
 		log.setRect( 0, toolbar.top(), attack.left(),  0 );
 		add( log );
-		
-		busy = new BusyIndicator();
+
+		BusyIndicator busy = new BusyIndicator();
 		busy.camera = uiCamera;
 		busy.x = 1;
 		busy.y = sb.bottom() + 1;
-		add( busy );
+		add(busy);
 		
 		switch (InterlevelScene.mode) {
 		case RESURRECT:
 			WandOfBlink.appear( Dungeon.hero, Dungeon.level.entrance );
-			new Flare( 8, 32 ).color( 0xFFFF66, true ).show( hero, 2f ) ;
+			new Flare( 8, 32 ).color( 0xFFFF66, true ).show(hero, 2f ) ;
 			break;
 		case RETURN:
 			WandOfBlink.appear(  Dungeon.hero, Dungeon.hero.pos );

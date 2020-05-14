@@ -23,10 +23,8 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class Combo extends Buff {
-	
-	private static String TXT_COMBO = "%d hit combo!";
-	
-	public int count = 0;
+
+    public int count = 0;
 	
 	@Override
 	public int icon() {
@@ -45,8 +43,9 @@ public class Combo extends Buff {
 		if (count >= 3) {
 			
 			Badges.validateMasteryCombo( count );
-			
-			GLog.p( TXT_COMBO, count );
+
+            String TXT_COMBO = "%d hit combo!";
+            GLog.p(TXT_COMBO, count );
 			postpone( 1.41f - count / 10f );
 			return (int)(damage * (count - 2) / 5f);
 			
