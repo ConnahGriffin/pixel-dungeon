@@ -74,12 +74,13 @@ public class Toolbar extends Component {
 			@Override
 			protected void onClick() {
 				Dungeon.hero.rest( false );
-			};
-			protected boolean onLongClick() {
+			}
+
+            protected boolean onLongClick() {
 				Dungeon.hero.rest( true );
 				return true;
-			};
-		} );
+			}
+        } );
 		
 		add( btnSearch = new Tool( 20, 7, 20, 25 ) {
 			@Override
@@ -104,19 +105,21 @@ public class Toolbar extends Component {
 			protected boolean onLongClick() {
 				GameScene.show( new WndCatalogus() );
 				return true;
-			};
-			@Override
+			}
+
+            @Override
 			protected void createChildren() {
 				super.createChildren();
 				gold = new GoldIndicator();
 				add( gold );
-			};
-			@Override
+			}
+
+            @Override
 			protected void layout() {
 				super.layout();
 				gold.fill( this );
-			};
-		} );
+			}
+        } );
 		
 		add( btnQuick1 = new QuickslotTool( 83, 7, 22, 25, true ) );
 		add( btnQuick2 = new QuickslotTool( 83, 7, 22, 25, false ) );

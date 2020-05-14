@@ -84,7 +84,7 @@ public class Honeypot extends Item {
 		
 		int newPos = pos;
 		if (Actor.findChar( pos ) != null) {
-			ArrayList<Integer> candidates = new ArrayList<Integer>();
+			ArrayList<Integer> candidates = new ArrayList<>();
 			boolean[] passable = Level.passable;
 			
 			for (int n : Level.NEIGHBOURS4) {

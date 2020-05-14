@@ -166,7 +166,7 @@ public class Badges {
 	}
 	
 	private static HashSet<Badge> global;
-	private static HashSet<Badge> local = new HashSet<Badges.Badge>();
+	private static HashSet<Badge> local = new HashSet<>();
 	
 	private static boolean saveNeeded = false;
 	
@@ -181,7 +181,7 @@ public class Badges {
 	private static final String BADGES		= "badges";
 	
 	private static HashSet<Badge> restore( Bundle bundle ) {
-		HashSet<Badge> badges = new HashSet<Badge>();
+		HashSet<Badge> badges = new HashSet<>();
 		
 		String[] names = bundle.getStringArray( BADGES );
 		for (int i=0; i < names.length; i++) {
@@ -222,7 +222,7 @@ public class Badges {
 				global = restore( bundle );
 				
 			} catch (IOException e) {
-				global = new HashSet<Badge>();
+				global = new HashSet<>();
 			}
 		}
 	}
@@ -890,7 +890,7 @@ public class Badges {
 	
 	public static List<Badge> filtered( boolean global ) {
 		
-		HashSet<Badge> filtered = new HashSet<Badge>( global ? Badges.global : Badges.local );
+		HashSet<Badge> filtered = new HashSet<>(global ? Badges.global : Badges.local);
 		
 		{
 			Iterator<Badge> iterator = filtered.iterator();
@@ -924,7 +924,7 @@ public class Badges {
  		leaveBest( filtered, Badge.VICTORY, Badge.CHAMPION );
 		leaveBest( filtered, Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4 );
 		
-		ArrayList<Badge> list = new ArrayList<Badge>( filtered );
+		ArrayList<Badge> list = new ArrayList<>(filtered);
 		Collections.sort( list );
 		
 		return list;

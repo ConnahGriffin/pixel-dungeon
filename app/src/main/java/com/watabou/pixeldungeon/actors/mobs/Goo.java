@@ -219,7 +219,7 @@ public class Goo extends Mob {
 			"conglomerate of substances from the sewers that gained rudiments of free will.";
 	}
 	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> RESISTANCES = new HashSet<>();
 	static {
 		RESISTANCES.add( ToxicGas.class );
 		RESISTANCES.add( Death.class );

@@ -85,7 +85,7 @@ public class Bat extends Mob {
 			"replenishing their health with each successful attack.";
 	}
 	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> RESISTANCES = new HashSet<>();
 	static {
 		RESISTANCES.add( Leech.class );
 	}

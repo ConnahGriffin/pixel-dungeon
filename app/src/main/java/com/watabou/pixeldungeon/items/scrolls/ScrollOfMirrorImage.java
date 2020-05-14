@@ -40,7 +40,7 @@ public class ScrollOfMirrorImage extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		ArrayList<Integer> respawnPoints = new ArrayList<Integer>();
+		ArrayList<Integer> respawnPoints = new ArrayList<>();
 		
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 			int p = curUser.pos + Level.NEIGHBOURS8[i];

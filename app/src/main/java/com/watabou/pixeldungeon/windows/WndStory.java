@@ -42,7 +42,7 @@ public class WndStory extends Window {
 	public static final int ID_METROPOLIS	= 3;
 	public static final int ID_HALLS		= 4;
 	
-	private static final SparseArray<String> CHAPTERS = new SparseArray<String>();
+	private static final SparseArray<String> CHAPTERS = new SparseArray<>();
 	
 	static {
 		CHAPTERS.put( ID_SEWERS, 
@@ -72,9 +72,9 @@ public class WndStory extends Window {
 		"dwarves were too weakened to clear them of remaining demons. Gradually demons have tightened their grip on this place " +
 		"and now it's called Demon Halls.\n\n" +
 		"Very few adventurers have ever descended this far..." );
-	};
-	
-	private BitmapTextMultiline tf;
+	}
+
+    private BitmapTextMultiline tf;
 	
 	private float delay;
 	

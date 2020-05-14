@@ -50,7 +50,7 @@ public class WandOfDisintegration extends Wand {
 		int maxDistance = distance();
 		Ballistica.distance = Math.min( Ballistica.distance, maxDistance );
 		
-		ArrayList<Char> chars = new ArrayList<Char>();
+		ArrayList<Char> chars = new ArrayList<>();
 		
 		for (int i=1; i < Ballistica.distance; i++) {
 			

@@ -80,7 +80,7 @@ public abstract class RegularLevel extends Level {
 		roomEntrance.type = Type.ENTRANCE;
 		roomExit.type = Type.EXIT;
 		
-		HashSet<Room> connected = new HashSet<Room>();
+		HashSet<Room> connected = new HashSet<>();
 		connected.add( roomEntrance );
 		
 		Graph.buildDistanceMap( rooms, roomExit );
@@ -131,7 +131,7 @@ public abstract class RegularLevel extends Level {
 			}
 		}
 		
-		specials = new ArrayList<Room.Type>( Room.SPECIALS );
+		specials = new ArrayList<>(Room.SPECIALS);
 		if (Dungeon.bossLevel( Dungeon.depth + 1 )) {
 			specials.remove( Room.Type.WEAK_FLOOR );
 		}
@@ -147,7 +147,7 @@ public abstract class RegularLevel extends Level {
 	}
 	
 	protected boolean initRooms() {
-		rooms = new HashSet<Room>();
+		rooms = new HashSet<>();
 		split( new Rect( 0, 0, WIDTH - 1, HEIGHT - 1 ) );
 		
 		if (rooms.size() < 8) {
@@ -210,7 +210,7 @@ public abstract class RegularLevel extends Level {
 					
 				} else if (Random.Int( 2 ) == 0){
 
-					HashSet<Room> neigbours = new HashSet<Room>();
+					HashSet<Room> neigbours = new HashSet<>();
 					for (Room n : r.neigbours) {
 						if (!r.connected.containsKey( n ) && 
 							!Room.SPECIALS.contains( n.type ) &&

@@ -48,9 +48,9 @@ public class Bleeding extends Buff {
 	
 	public void set( int level ) {
 		this.level = level;
-	};
-	
-	@Override
+	}
+
+    @Override
 	public int icon() {
 		return BuffIndicator.BLEEDING;
 	}

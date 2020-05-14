@@ -117,7 +117,7 @@ public class Skeleton extends Mob {
 			"damaged enough, they disintegrate in an explosion of bones.";
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Death.class );
 	}

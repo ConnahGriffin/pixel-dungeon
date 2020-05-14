@@ -93,8 +93,8 @@ abstract public class MissileWeapon extends Weapon {
 					if (index == 0) {
 						MissileWeapon.super.doEquip( hero );
 					}
-				};
-			}
+				}
+            }
 		);
 		
 		return false;

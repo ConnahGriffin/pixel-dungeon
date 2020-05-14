@@ -148,8 +148,8 @@ public class Statue extends Mob {
 			"While the statue itself is made of stone, the _" + weapon.name() + "_, it's wielding, looks real.";
 	}
 	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> RESISTANCES = new HashSet<>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		RESISTANCES.add( ToxicGas.class );
 		RESISTANCES.add( Poison.class );

@@ -31,8 +31,8 @@ public class ElmoParticle extends PixelParticle.Shrinking {
 		@Override
 		public boolean lightMode() {
 			return true;
-		};
-	};
+		}
+    };
 	
 	public ElmoParticle() {
 		super();

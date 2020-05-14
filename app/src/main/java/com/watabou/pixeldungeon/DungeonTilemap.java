@@ -67,8 +67,8 @@ public class DungeonTilemap extends Tilemap {
 			protected void onComplete() {
 				tile.killAndErase();
 				killAndErase();
-			};
-		} );
+			}
+        } );
 	}
 	
 	public static PointF tileToWorld( int pos ) {

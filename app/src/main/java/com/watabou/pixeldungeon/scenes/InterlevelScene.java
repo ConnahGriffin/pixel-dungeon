@@ -50,8 +50,9 @@ public class InterlevelScene extends PixelScene {
 	
 	public static enum Mode {
 		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, NONE
-	};
-	public static Mode mode;
+	}
+
+    public static Mode mode;
 	
 	public static int returnDepth;
 	public static int returnPos;
@@ -62,8 +63,9 @@ public class InterlevelScene extends PixelScene {
 	
 	private enum Phase {
 		FADE_IN, STATIC, FADE_OUT
-	};
-	private Phase phase;
+	}
+
+    private Phase phase;
 	private float timeLeft;
 	
 	private BitmapText message;
@@ -196,8 +198,8 @@ public class InterlevelScene extends PixelScene {
 					public void onBackPressed() {
 						super.onBackPressed();
 						Game.switchScene( StartScene.class );
-					};
-				} );
+					}
+                } );
 				error = null;
 			}
 			break;

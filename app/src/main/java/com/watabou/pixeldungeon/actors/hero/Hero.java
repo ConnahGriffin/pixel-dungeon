@@ -176,7 +176,7 @@ public class Hero extends Char {
 		
 		belongings = new Belongings( this );
 		
-		visibleEnemies = new ArrayList<Mob>();
+		visibleEnemies = new ArrayList<>();
 	}
 
 	public int STR() {
@@ -359,9 +359,9 @@ public class Hero extends Char {
 			hasteLevel += ((RingOfHaste.Haste)buff).level;
 		}
 		super.spend( hasteLevel == 0 ? time : (float)(time * Math.pow( 1.1, -hasteLevel )) );
-	};
-	
-	public void spendAndNext( float time ) {
+	}
+
+    public void spendAndNext( float time ) {
 		busy();
 		spend( time );
 		next();
@@ -876,7 +876,7 @@ public class Hero extends Char {
 	}
 	
 	private void checkVisibleMobs() {
-		ArrayList<Mob> visible = new ArrayList<Mob>();
+		ArrayList<Mob> visible = new ArrayList<>();
 		
 		boolean newMob = false;
 		
@@ -1193,7 +1193,7 @@ public class Hero extends Char {
 		
 		int pos = Dungeon.hero.pos;
 		
-		ArrayList<Integer> passable = new ArrayList<Integer>();
+		ArrayList<Integer> passable = new ArrayList<>();
 		for (Integer ofs : Level.NEIGHBOURS8) {
 			int cell = pos + ofs;
 			if ((Level.passable[cell] || Level.avoid[cell]) && Dungeon.level.heaps.get( cell ) == null) {
@@ -1202,7 +1202,7 @@ public class Hero extends Char {
 		}
 		Collections.shuffle( passable );
 		
-		ArrayList<Item> items = new ArrayList<Item>( Dungeon.hero.belongings.backpack.items );
+		ArrayList<Item> items = new ArrayList<>(Dungeon.hero.belongings.backpack.items);
 		for (Integer cell : passable) {
 			if (items.isEmpty()) {
 				break;
@@ -1416,7 +1416,7 @@ public class Hero extends Char {
 	public void next() {
 		super.next();
 	}
-	
+
 	public static interface Doom {
 		public void onDeath();
 	}

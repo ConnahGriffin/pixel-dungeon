@@ -50,8 +50,8 @@ public class Toast extends Component {
 		close = new SimpleButton( Icons.get( Icons.CLOSE ) ) {
 			protected void onClick() {
 				onClose();
-			};
-		};
+			}
+        };
 		add( close );
 		
 		text = PixelScene.createText( 8 );
@@ -80,5 +80,5 @@ public class Toast extends Component {
 		text.measure();
 	}
 	
-	protected void onClose() {};
+	protected void onClose() {}
 }

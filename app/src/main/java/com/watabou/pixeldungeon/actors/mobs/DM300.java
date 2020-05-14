@@ -149,7 +149,7 @@ public class DM300 extends Mob {
 			"machines were typically used for construction and mining, and in some cases, for city defense.";
 	}
 	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> RESISTANCES = new HashSet<>();
 	static {
 		RESISTANCES.add( Death.class );
 		RESISTANCES.add( ScrollOfPsionicBlast.class );
@@ -160,7 +160,7 @@ public class DM300 extends Mob {
 		return RESISTANCES;
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( ToxicGas.class );
 	}

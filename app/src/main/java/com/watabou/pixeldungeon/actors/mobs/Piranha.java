@@ -128,7 +128,7 @@ public class Piranha extends Mob {
 			"They were bred specifically to protect flooded treasure vaults.";
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Burning.class );
 		IMMUNITIES.add( Paralysis.class );

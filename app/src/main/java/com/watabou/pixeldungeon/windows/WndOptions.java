@@ -65,5 +65,5 @@ public class WndOptions extends Window {
 		resize( WIDTH, (int)pos );
 	}
 	
-	protected void onSelect( int index ) {};
+	protected void onSelect( int index ) {}
 }

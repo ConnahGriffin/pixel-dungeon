@@ -57,8 +57,8 @@ public class Chasm {
 						jumpConfirmed = true;
 						hero.resume();
 					}
-				};
-			}
+				}
+            }
 		);
 	}
 	

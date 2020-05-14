@@ -76,7 +76,7 @@ public class StartScene extends PixelScene {
 	private static final float WIDTH_L	= 224;
 	private static final float HEIGHT_L	= 124;
 	
-	private static HashMap<HeroClass, ClassShield> shields = new HashMap<HeroClass, ClassShield>();
+	private static HashMap<HeroClass, ClassShield> shields = new HashMap<>();
 	
 	private float buttonX;
 	private float buttonY;
@@ -512,8 +512,8 @@ public class StartScene extends PixelScene {
 						super.onBackPressed();
 						image.copy( Icons.get( PixelDungeon.challenges() > 0 ? 
 							Icons.CHALLENGE_ON :Icons.CHALLENGE_OFF ) );
-					};
-				} );
+					}
+                } );
 			} else {
 				StartScene.this.add( new WndMessage( TXT_WIN_THE_GAME ) );
 			}

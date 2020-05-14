@@ -101,7 +101,7 @@ public class Spinner extends Mob {
 			"while their victim, entangled in the spinner's excreted cobweb, slowly dies from their poisonous bite.";
 	}
 	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> RESISTANCES = new HashSet<>();
 	static {
 		RESISTANCES.add( Poison.class );
 	}
@@ -111,7 +111,7 @@ public class Spinner extends Mob {
 		return RESISTANCES;
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Roots.class );
 	}

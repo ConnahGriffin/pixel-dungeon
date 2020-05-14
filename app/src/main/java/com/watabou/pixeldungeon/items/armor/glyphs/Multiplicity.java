@@ -45,7 +45,7 @@ public class Multiplicity extends Glyph {
 		
 		if (Random.Int( level / 2 + 6 ) >= 5) {
 			
-			ArrayList<Integer> respawnPoints = new ArrayList<Integer>();
+			ArrayList<Integer> respawnPoints = new ArrayList<>();
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				int p = defender.pos + Level.NEIGHBOURS8[i];

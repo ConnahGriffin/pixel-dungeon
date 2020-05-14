@@ -128,7 +128,7 @@ public class Mimic extends Mob {
 	public static Mimic spawnAt( int pos, List<Item> items ) {
 		Char ch = Actor.findChar( pos ); 
 		if (ch != null) {
-			ArrayList<Integer> candidates = new ArrayList<Integer>();
+			ArrayList<Integer> candidates = new ArrayList<>();
 			for (int n : Level.NEIGHBOURS8) {
 				int cell = pos + n;
 				if ((Level.passable[cell] || Level.avoid[cell]) && Actor.findChar( cell ) == null) {
@@ -152,7 +152,7 @@ public class Mimic extends Mob {
 		}
 		
 		Mimic m = new Mimic();
-		m.items = new ArrayList<Item>( items );
+		m.items = new ArrayList<>(items);
 		m.adjustStats( Dungeon.depth );
 		m.HP = m.HT;
 		m.pos = pos;
@@ -169,7 +169,7 @@ public class Mimic extends Mob {
 		return m;
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( ScrollOfPsionicBlast.class );
 	}

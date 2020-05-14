@@ -47,10 +47,10 @@ public class RingOfElements extends Ring {
 			super.desc();
 	}
 
-	private static final HashSet<Class<?>> EMPTY = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> EMPTY = new HashSet<>();
 	private static final HashSet<Class<?>> FULL;
 	static {
-		FULL = new HashSet<Class<?>>();
+		FULL = new HashSet<>();
 		FULL.add( Burning.class );
 		FULL.add( ToxicGas.class );
 		FULL.add( Poison.class );

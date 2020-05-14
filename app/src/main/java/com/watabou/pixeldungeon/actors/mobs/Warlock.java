@@ -133,7 +133,7 @@ public class Warlock extends Mob implements Callback {
 			"but soon switched to demonology and necromancy.";
 	}
 	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> RESISTANCES = new HashSet<>();
 	static {
 		RESISTANCES.add( Death.class );
 	}

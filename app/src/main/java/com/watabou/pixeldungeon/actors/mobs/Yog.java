@@ -111,7 +111,7 @@ public class Yog extends Mob {
 	@Override
 	public int defenseProc( Char enemy, int damage ) {
 
-		ArrayList<Integer> spawnPoints = new ArrayList<Integer>();
+		ArrayList<Integer> spawnPoints = new ArrayList<>();
 		
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 			int p = pos + Level.NEIGHBOURS8[i];
@@ -164,7 +164,7 @@ public class Yog extends Mob {
 			
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		
 		IMMUNITIES.add( Death.class );
@@ -251,7 +251,7 @@ public class Yog extends Mob {
 				
 		}
 		
-		private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+		private static final HashSet<Class<?>> RESISTANCES = new HashSet<>();
 		static {
 			RESISTANCES.add( ToxicGas.class );
 			RESISTANCES.add( Death.class );
@@ -263,7 +263,7 @@ public class Yog extends Mob {
 			return RESISTANCES;
 		}
 		
-		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 		static {
 			IMMUNITIES.add( Amok.class );
 			IMMUNITIES.add( Sleep.class );
@@ -368,7 +368,7 @@ public class Yog extends Mob {
 				
 		}
 		
-		private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+		private static final HashSet<Class<?>> RESISTANCES = new HashSet<>();
 		static {
 			RESISTANCES.add( ToxicGas.class );
 			RESISTANCES.add( Death.class );
@@ -380,7 +380,7 @@ public class Yog extends Mob {
 			return RESISTANCES;
 		}
 		
-		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 		static {
 			IMMUNITIES.add( Amok.class );
 			IMMUNITIES.add( Sleep.class );

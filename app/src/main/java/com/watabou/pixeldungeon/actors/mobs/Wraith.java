@@ -126,7 +126,7 @@ public class Wraith extends Mob {
 		}
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Death.class );
 		IMMUNITIES.add( Terror.class );

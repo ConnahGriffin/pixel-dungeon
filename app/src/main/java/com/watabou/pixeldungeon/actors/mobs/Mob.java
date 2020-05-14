@@ -158,7 +158,7 @@ public abstract class Mob extends Char {
 		if (buff( Amok.class ) != null) {
 			if (enemy == Dungeon.hero || enemy == null) {
 				
-				HashSet<Mob> enemies = new HashSet<Mob>();
+				HashSet<Mob> enemies = new HashSet<>();
 				for (Mob mob:Dungeon.level.mobs) {
 					if (mob != this && Level.fieldOfView[mob.pos]) {
 						enemies.add( mob );

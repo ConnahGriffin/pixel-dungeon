@@ -85,7 +85,7 @@ public class FetidRat extends Mob {
 			"This marsupial rat is much larger than a regular one. It is surrounded by a foul cloud.";
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Paralysis.class );
 	}

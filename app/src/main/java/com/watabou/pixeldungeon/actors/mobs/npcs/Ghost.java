@@ -118,7 +118,7 @@ public class Ghost extends NPC {
 			"spot of faint light with a sorrowful face.";
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( Roots.class );
@@ -137,8 +137,8 @@ public class Ghost extends NPC {
 			protected void onComplete() {
 				a.sprite.killAndErase();
 				parent.erase( this );
-			};
-		} );
+			}
+        } );
 		
 		b.pos = a.pos;
 		GameScene.add( b );
@@ -454,8 +454,8 @@ public class Ghost extends NPC {
 						} else {
 							relocate( ghost );
 						}
-					};
-				} );
+					}
+                } );
 				
 				Journal.add( Journal.Feature.GHOST );
 			}

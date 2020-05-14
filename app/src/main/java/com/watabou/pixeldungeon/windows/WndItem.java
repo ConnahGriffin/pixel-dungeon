@@ -76,8 +76,8 @@ public class WndItem extends Window {
 						item.execute( Dungeon.hero, action );
 						hide();
 						owner.hide();
-					};
-				};
+					}
+                };
 				btn.setSize( Math.max( BUTTON_WIDTH, btn.reqWidth() ), BUTTON_HEIGHT );
 				if (x + btn.width() > WIDTH) {
 					x = 0;

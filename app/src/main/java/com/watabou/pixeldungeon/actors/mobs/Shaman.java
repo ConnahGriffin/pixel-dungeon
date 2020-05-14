@@ -132,7 +132,7 @@ public class Shaman extends Mob implements Callback {
 			"on those who question their status in a tribe.";
 	}
 	
-	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> RESISTANCES = new HashSet<>();
 	static {
 		RESISTANCES.add( LightningTrap.Electricity.class );
 	}

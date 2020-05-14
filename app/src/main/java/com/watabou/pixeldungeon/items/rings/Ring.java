@@ -90,7 +90,7 @@ public class Ring extends EquipableItem {
 	
 	@SuppressWarnings("unchecked")
 	public static void initGems() {
-		handler = new ItemStatusHandler<Ring>( (Class<? extends Ring>[])rings, gems, images );
+		handler = new ItemStatusHandler<>((Class<? extends Ring>[]) rings, gems, images);
 	}
 	
 	public static void save( Bundle bundle ) {
@@ -99,7 +99,7 @@ public class Ring extends EquipableItem {
 	
 	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<Ring>( (Class<? extends Ring>[])rings, gems, images, bundle );
+		handler = new ItemStatusHandler<>((Class<? extends Ring>[]) rings, gems, images, bundle);
 	}
 	
 	public Ring() {

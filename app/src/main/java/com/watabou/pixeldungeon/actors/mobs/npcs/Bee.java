@@ -98,7 +98,7 @@ public class Bee extends NPC {
 	protected Char chooseEnemy() {
 		
 		if (enemy == null || !enemy.isAlive()) {
-			HashSet<Mob> enemies = new HashSet<Mob>();
+			HashSet<Mob> enemies = new HashSet<>();
 			for (Mob mob:Dungeon.level.mobs) {
 				if (mob.hostile && Level.fieldOfView[mob.pos]) {
 					enemies.add( mob );
@@ -136,7 +136,7 @@ public class Bee extends NPC {
 		Dungeon.hero.busy();
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Poison.class );
 	}

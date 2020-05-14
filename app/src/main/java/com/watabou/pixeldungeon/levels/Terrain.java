@@ -138,9 +138,9 @@ public class Terrain {
 		for (int i=WATER_TILES; i < WATER_TILES + 16; i++) {
 			flags[i] = flags[WATER];
 		}
-	};
-	
-	public static int discover( int terr ) {
+	}
+
+    public static int discover( int terr ) {
 		switch (terr) {
 		case SECRET_DOOR:
 			return DOOR;

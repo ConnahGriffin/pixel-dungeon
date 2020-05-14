@@ -36,7 +36,7 @@ public class GasesImmunity extends FlavourBuff {
 		return "Immune to gases";
 	}
 	
-	public static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	public static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Paralysis.class );
 		IMMUNITIES.add( ToxicGas.class );

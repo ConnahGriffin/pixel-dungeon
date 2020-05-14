@@ -41,7 +41,7 @@ public class Bag extends Item implements Iterable<Item> {
 	
 	public Char owner;
 	
-	public ArrayList<Item> items = new ArrayList<Item>();	
+	public ArrayList<Item> items = new ArrayList<>();
 	
 	public int size = 1;
 	
@@ -117,7 +117,7 @@ public class Bag extends Item implements Iterable<Item> {
 		super.restoreFromBundle( bundle );
 		for (Bundlable item : bundle.getCollection( ITEMS )) {
 			((Item)item).collect( this );
-		};
+		}
 	}
 	
 	public boolean contains( Item item ) {

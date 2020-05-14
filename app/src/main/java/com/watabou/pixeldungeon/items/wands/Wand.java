@@ -115,7 +115,7 @@ public abstract class Wand extends KindOfWeapon {
 	
 	@SuppressWarnings("unchecked")
 	public static void initWoods() {
-		handler = new ItemStatusHandler<Wand>( (Class<? extends Wand>[])wands, woods, images );
+		handler = new ItemStatusHandler<>((Class<? extends Wand>[]) wands, woods, images);
 	}
 	
 	public static void save( Bundle bundle ) {
@@ -124,7 +124,7 @@ public abstract class Wand extends KindOfWeapon {
 	
 	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<Wand>( (Class<? extends Wand>[])wands, woods, images, bundle );
+		handler = new ItemStatusHandler<>((Class<? extends Wand>[]) wands, woods, images, bundle);
 	}
 	
 	public Wand() {
@@ -189,9 +189,9 @@ public abstract class Wand extends KindOfWeapon {
 		} else {
 			return false;
 		}
-	};
-	
-	public void charge( Char owner ) {
+	}
+
+    public void charge( Char owner ) {
 		if (charger == null) {
 			(charger = new Charger()).attachTo( owner );
 		}

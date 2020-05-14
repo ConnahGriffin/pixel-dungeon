@@ -107,9 +107,9 @@ public class Viscosity extends Glyph {
 		
 		public void prolong( int damage ) {
 			this.damage += damage;
-		};
-		
-		@Override
+		}
+
+        @Override
 		public int icon() {
 			return BuffIndicator.DEFERRED;
 		}

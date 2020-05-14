@@ -51,7 +51,7 @@ public class WndChallenges extends Window {
 		title.y = PixelScene.align( camera, (TTL_HEIGHT - title.height()) / 2 );
 		add( title );
 
-		boxes = new ArrayList<CheckBox>();
+		boxes = new ArrayList<>();
 		
 		float pos = TTL_HEIGHT;
 		for (int i=0; i < Challenges.NAMES.length; i++) {

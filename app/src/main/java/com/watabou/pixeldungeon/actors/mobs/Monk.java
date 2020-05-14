@@ -107,7 +107,7 @@ public class Monk extends Mob {
 			"They don't use any armor or weapons, relying solely on the art of hand-to-hand combat.";
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Amok.class );
 		IMMUNITIES.add( Terror.class );

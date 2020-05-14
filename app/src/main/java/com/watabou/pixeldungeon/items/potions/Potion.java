@@ -94,7 +94,7 @@ public class Potion extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void initColors() {
-		handler = new ItemStatusHandler<Potion>( (Class<? extends Potion>[])potions, colors, images );
+		handler = new ItemStatusHandler<>((Class<? extends Potion>[]) potions, colors, images);
 	}
 	
 	public static void save( Bundle bundle ) {
@@ -103,7 +103,7 @@ public class Potion extends Item {
 	
 	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<Potion>( (Class<? extends Potion>[])potions, colors, images, bundle );
+		handler = new ItemStatusHandler<>((Class<? extends Potion>[]) potions, colors, images, bundle);
 	}
 	
 	public Potion() {
@@ -135,8 +135,8 @@ public class Potion extends Item {
 								if (index == 0) {
 									drink( hero );
 								}
-							};
-						}
+							}
+                        }
 					);
 					
 				} else {
@@ -169,8 +169,8 @@ public class Potion extends Item {
 						if (index == 0) {
 							Potion.super.doThrow( hero );
 						}
-					};
-				}
+					}
+                }
 			);
 			
 		} else {

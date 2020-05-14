@@ -135,8 +135,8 @@ public class SurfaceScene extends PixelScene {
 		window.add( new TouchArea( sky ) {
 			protected void onClick( Touch touch ) {
 				pet.jump();
-			};
-		} );
+			}
+        } );
 		
 		for (int i=0; i < nPatches; i++) {
 			GrassPatch patch = new GrassPatch( (i - 0.5f) * GrassPatch.WIDTH, SKY_HEIGHT, dayTime );

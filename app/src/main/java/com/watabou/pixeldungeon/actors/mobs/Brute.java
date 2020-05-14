@@ -93,7 +93,7 @@ public class Brute extends Mob {
 			"they go berserk, inflicting even more damage to their enemies.";
 	}
 	
-	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
+	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<>();
 	static {
 		IMMUNITIES.add( Terror.class );
 	}

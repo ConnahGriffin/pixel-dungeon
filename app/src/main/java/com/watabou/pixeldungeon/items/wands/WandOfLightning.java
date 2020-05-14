@@ -41,7 +41,7 @@ public class WandOfLightning extends Wand {
 		name = "Wand of Lightning";
 	}
 	
-	private ArrayList<Char> affected = new ArrayList<Char>();
+	private ArrayList<Char> affected = new ArrayList<>();
 	
 	private int[] points = new int[20];
 	private int nPoints;
@@ -73,7 +73,7 @@ public class WandOfLightning extends Wand {
 		
 		points[nPoints++] = ch.pos;
 		
-		HashSet<Char> ns = new HashSet<Char>();
+		HashSet<Char> ns = new HashSet<>();
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 			Char n = Actor.findChar( ch.pos + Level.NEIGHBOURS8[i] );
 			if (n != null && !affected.contains( n )) {

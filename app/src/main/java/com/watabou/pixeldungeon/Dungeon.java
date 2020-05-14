@@ -117,14 +117,14 @@ public class Dungeon {
 		depth = 0;
 		gold = 0;
 		
-		droppedItems = new SparseArray<ArrayList<Item>>();
+		droppedItems = new SparseArray<>();
 		
 		potionOfStrength = 0;
 		scrollsOfUpgrade = 0;
 		scrollsOfEnchantment = 0;
 		dewVial = true;
 		
-		chapters = new HashSet<Integer>();
+		chapters = new HashSet<>();
 		
 		Ghost.Quest.reset();
 		Wandmaker.Quest.reset();
@@ -156,12 +156,7 @@ public class Dungeon {
 		depth++;
 		if (depth > Statistics.deepestFloor) {
 			Statistics.deepestFloor = depth;
-			
-			if (Statistics.qualifiedForNoKilling) {
-				Statistics.completedWithNoKilling = true;
-			} else {
-				Statistics.completedWithNoKilling = false;
-			}
+			Statistics.completedWithNoKilling = Statistics.qualifiedForNoKilling;
 		}
 		
 		Arrays.fill( visible, false );
@@ -277,7 +272,7 @@ public class Dungeon {
 		int depth = Dungeon.depth + 1;
 		ArrayList<Item> dropped = (ArrayList<Item>)Dungeon.droppedItems.get( depth );
 		if (dropped == null) {
-			Dungeon.droppedItems.put( depth, dropped = new ArrayList<Item>() ); 
+			Dungeon.droppedItems.put( depth, dropped = new ArrayList<>() );
 		}
 		dropped.add( item );
 	}
@@ -481,7 +476,7 @@ public class Dungeon {
 		dewVial = bundle.getBoolean( DV );
 		
 		if (fullLoad) {
-			chapters = new HashSet<Integer>();
+			chapters = new HashSet<>();
 			int[] ids = bundle.getIntArray( CHAPTERS );
 			if (ids != null) {
 				for (int id : ids) {
@@ -528,9 +523,9 @@ public class Dungeon {
 		Statistics.restoreFromBundle( bundle );
 		Journal.restoreFromBundle( bundle );
 		
-		droppedItems = new SparseArray<ArrayList<Item>>();
+		droppedItems = new SparseArray<>();
 		for (int i=2; i <= Statistics.deepestFloor + 1; i++) {
-			ArrayList<Item> dropped = new ArrayList<Item>();
+			ArrayList<Item> dropped = new ArrayList<>();
 			for (Bundlable b : bundle.getCollection( String.format( DROPPED, i ) ) ) {
 				dropped.add( (Item)b );
 			}
