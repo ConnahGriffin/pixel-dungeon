@@ -5,7 +5,7 @@ android {
     buildToolsVersion '28.0.3'
 
     defaultConfig {
-        applicationId "com.watabou.pixeldungeon"
+        applicationId "com.pdextended.pixeldungeonextended"
         minSdkVersion 14
         targetSdkVersion 28
     }
