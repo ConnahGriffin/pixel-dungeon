@@ -288,9 +288,7 @@ public class WndRanking extends WndTabbed {
 				
 				@SuppressWarnings("unchecked")
 				Item item = Dungeon.hero.belongings.getItem( (Class<? extends Item>)value );
-				if (item != null) {
-					return item;
-				}
+				return item;
 			}
 			
 			return null;

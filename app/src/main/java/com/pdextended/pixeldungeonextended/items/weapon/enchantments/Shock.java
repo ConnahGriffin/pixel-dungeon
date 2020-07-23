@@ -78,7 +78,7 @@ public class Shock extends Weapon.Enchantment {
 		}
 		
 		affected.add( ch );
-		ch.damage( Level.water[ch.pos] && !ch.flying ? (int)(damage * 2) : damage, LightningTrap.LIGHTNING  );
+		ch.damage( Level.water[ch.pos] && !ch.flying ? (damage * 2) : damage, LightningTrap.LIGHTNING  );
 		
 		ch.sprite.centerEmitter().burst( SparkParticle.FACTORY, 3 );
 		ch.sprite.flash();

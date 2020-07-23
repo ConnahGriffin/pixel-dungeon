@@ -128,13 +128,11 @@ public class PrisonLevel extends RegularLevel {
 	
 	@Override
 	public String tileName( int tile ) {
-		switch (tile) {
-		case Terrain.WATER:
-			return "Dark cold water.";
-		default:
-			return super.tileName( tile );
-		}
-	}
+        if (tile == Terrain.WATER) {
+            return "Dark cold water.";
+        }
+        return super.tileName(tile);
+    }
 	
 	@Override
 	public String tileDesc(int tile) {

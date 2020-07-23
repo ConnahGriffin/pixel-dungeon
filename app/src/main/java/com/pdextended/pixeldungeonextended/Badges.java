@@ -50,7 +50,7 @@ import com.pdextended.utils.Callback;
 
 public class Badges {
 	
-	public static enum Badge {
+	public enum Badge {
 		MONSTERS_SLAIN_1( "10 enemies slain", 0 ),
 		MONSTERS_SLAIN_2( "50 enemies slain", 1 ),
 		MONSTERS_SLAIN_3( "150 enemies slain", 2 ),
@@ -150,17 +150,17 @@ public class Badges {
 		public String description;
 		public int image;
 		
-		private Badge( String description, int image ) {
+		Badge(String description, int image) {
 			this( description, image, false );
 		}
 		
-		private Badge( String description, int image, boolean meta ) {
+		Badge(String description, int image, boolean meta) {
 			this.description = description;
 			this.image = image;
 			this.meta = meta;
 		}
 		
-		private Badge() {
+		Badge() {
 			this( "", -1 );
 		}
 	}
@@ -901,7 +901,7 @@ public class Badges {
 				}
 			}
 		}
-		
+
 		leaveBest( filtered, Badge.MONSTERS_SLAIN_1, Badge.MONSTERS_SLAIN_2, Badge.MONSTERS_SLAIN_3, Badge.MONSTERS_SLAIN_4 );
 		leaveBest( filtered, Badge.GOLD_COLLECTED_1, Badge.GOLD_COLLECTED_2, Badge.GOLD_COLLECTED_3, Badge.GOLD_COLLECTED_4 );
 		leaveBest( filtered, Badge.BOSS_SLAIN_1, Badge.BOSS_SLAIN_2, Badge.BOSS_SLAIN_3, Badge.BOSS_SLAIN_4 );
@@ -923,7 +923,7 @@ public class Badges {
 		leaveBest( filtered, Badge.VICTORY, Badge.HAPPY_END );
  		leaveBest( filtered, Badge.VICTORY, Badge.CHAMPION );
 		leaveBest( filtered, Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4 );
-		
+
 		ArrayList<Badge> list = new ArrayList<>(filtered);
 		Collections.sort( list );
 		

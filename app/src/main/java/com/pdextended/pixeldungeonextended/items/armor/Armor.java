@@ -219,7 +219,7 @@ public class Armor extends EquipableItem {
 		StringBuilder info = new StringBuilder( desc() );
 		
 		if (levelKnown) {
-			info.append( 
+			info.append(
 				"\n\nThis " + name + " provides damage absorption up to " +
 				"" + Math.max( DR(), 0 ) + " points per attack. " );
 			

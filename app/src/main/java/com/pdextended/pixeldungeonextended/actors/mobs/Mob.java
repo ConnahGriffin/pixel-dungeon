@@ -171,7 +171,7 @@ public abstract class Mob extends Char {
 			}
 		}
 		
-		Terror terror = (Terror)buff( Terror.class );
+		Terror terror = buff( Terror.class );
 		if (terror != null) {
 			Char source = (Char)Actor.findById( terror.object );
 			if (source != null) {
@@ -419,8 +419,8 @@ public abstract class Mob extends Char {
 	}
 	
 	public interface AiState {
-		public boolean act( boolean enemyInFOV, boolean justAlerted );
-		public String status();
+		boolean act(boolean enemyInFOV, boolean justAlerted);
+		String status();
 	}
 	
 	private class Sleeping implements AiState {
