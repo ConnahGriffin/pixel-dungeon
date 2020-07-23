@@ -237,21 +237,17 @@ public class SewerBossLevel extends RegularLevel {
 	
 	@Override
 	public String tileName( int tile ) {
-		switch (tile) {
-		case Terrain.WATER:
-			return "Murky water";
-		default:
-			return super.tileName( tile );
-		}
-	}
+        if (tile == Terrain.WATER) {
+            return "Murky water";
+        }
+        return super.tileName(tile);
+    }
 	
 	@Override
 	public String tileDesc( int tile ) {
-		switch (tile) {
-		case Terrain.EMPTY_DECO:
+		if (tile == Terrain.EMPTY_DECO) {
 			return "Wet yellowish moss covers the floor.";
-		default:
-			return super.tileDesc( tile );
 		}
+		return super.tileDesc(tile);
 	}
 }

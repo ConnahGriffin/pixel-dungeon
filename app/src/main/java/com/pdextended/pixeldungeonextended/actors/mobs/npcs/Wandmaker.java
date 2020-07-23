@@ -111,7 +111,7 @@ public class Wandmaker extends NPC {
 			ILLEGAL( null ), BERRY( berryQuest ), DUST( dustQuest ), FISH( fishQuest );
 			
 			public QuestHandler handler;
-			private Type( QuestHandler handler ) {
+			Type(QuestHandler handler) {
 				this.handler = handler;
 			}
 		}

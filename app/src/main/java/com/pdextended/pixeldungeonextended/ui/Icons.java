@@ -80,7 +80,7 @@ public enum Icons {
 		case WATA:
 			icon.frame( icon.texture.uvRect( 30, 16, 45, 26 ) );
 			break;
-		case WARRIOR:
+        case WARRIOR:
 			icon.frame( icon.texture.uvRect( 0, 29, 16, 45 ) );
 			break;
 		case MAGE:

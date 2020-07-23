@@ -52,7 +52,7 @@ import com.pdextended.utils.GameMath;
 
 public class WndBag extends WndTabbed {
 	
-	public static enum Mode {
+	public enum Mode {
 		ALL,
 		UNIDENTIFED,
 		UPGRADEABLE,

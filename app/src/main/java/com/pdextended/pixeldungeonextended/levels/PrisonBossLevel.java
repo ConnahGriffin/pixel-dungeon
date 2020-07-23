@@ -349,22 +349,18 @@ public class PrisonBossLevel extends RegularLevel {
 	
 	@Override
 	public String tileName( int tile ) {
-		switch (tile) {
-		case Terrain.WATER:
+		if (tile == Terrain.WATER) {
 			return "Dark cold water.";
-		default:
-			return super.tileName( tile );
 		}
+		return super.tileName(tile);
 	}
 	
 	@Override
 	public String tileDesc(int tile) {
-		switch (tile) {
-		case Terrain.EMPTY_DECO:
+		if (tile == Terrain.EMPTY_DECO) {
 			return "There are old blood stains on the floor.";
-		default:
-			return super.tileDesc( tile );
 		}
+		return super.tileDesc(tile);
 	}
 	
 	@Override

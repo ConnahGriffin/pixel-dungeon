@@ -30,6 +30,7 @@ import com.pdextended.noosa.ColorBlock;
 import com.pdextended.noosa.Game;
 import com.pdextended.noosa.Scene;
 import com.pdextended.noosa.Visual;
+import com.pdextended.pixeldungeonextended.Almanac;
 import com.pdextended.pixeldungeonextended.Assets;
 import com.pdextended.pixeldungeonextended.Badges;
 import com.pdextended.pixeldungeonextended.PixelDungeonExtended;
@@ -268,6 +269,11 @@ public class PixelScene extends Scene {
 		banner.y = align( banner.camera, (banner.camera.height - banner.height) / 3 );
 		Game.scene().add( banner );
 	}
+
+	//TODO: Create a badge banner sorting for the items
+	public static void showItem(Almanac.Item_Index items) {
+
+    }
 	
 	protected static class Fader extends ColorBlock {
 		

@@ -469,7 +469,7 @@ public class Item implements Bundlable {
 	public static Item virtual( Class<? extends Item> cl ) {
 		try {
 			
-			Item item = (Item)cl.newInstance();
+			Item item = cl.newInstance();
 			item.quantity = 0;
 			return item;
 			
@@ -536,7 +536,7 @@ public class Item implements Bundlable {
 		if (isUpgradable()) {
 			durability = bundle.getInt( DURABILITY );
 		}
-		
+
 		QuickSlot.restore( bundle, this );
 	}
 	
@@ -579,7 +579,7 @@ public class Item implements Bundlable {
 	
 	protected static Hero curUser = null;
 	protected static Item curItem = null;
-	protected static CellSelector.Listener thrower = new CellSelector.Listener() {	
+	protected static CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
 		public void onSelect( Integer target ) {
 			if (target != null) {

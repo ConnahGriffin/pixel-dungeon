@@ -29,6 +29,7 @@ import com.pdextended.noosa.audio.Music;
 import com.pdextended.noosa.audio.Sample;
 import com.pdextended.noosa.ui.Button;
 import com.pdextended.pixeldungeonextended.Assets;
+import com.pdextended.pixeldungeonextended.BuildConfig;
 import com.pdextended.pixeldungeonextended.PixelDungeonExtended;
 import com.pdextended.pixeldungeonextended.effects.BannerSprites;
 import com.pdextended.pixeldungeonextended.effects.Fireball;
@@ -42,6 +43,7 @@ public class TitleScene extends PixelScene {
 	private static final String TXT_HIGHSCORES	= "Rankings";
 	private static final String TXT_BADGES		= "Badges";
 	private static final String TXT_ABOUT		= "About";
+	private static final String TXT_ALMANAC		= "Almanac";
 	
 	@Override
 	public void create() {
@@ -116,24 +118,17 @@ public class TitleScene extends PixelScene {
 		
 		DashboardItem btnHighscores = new DashboardItem( TXT_HIGHSCORES, 2 ) {
 			@Override
-			protected void onClick() {
-				PixelDungeonExtended.switchNoFade( RankingsScene.class );
+			protected void onClick() { PixelDungeonExtended.switchNoFade( RankingsScene.class );
 			}
 		};
 		add( btnHighscores );
-		
-		if (PixelDungeonExtended.landscape()) {
-			float y = (h + height) / 2 - DashboardItem.SIZE;
-			btnHighscores	.setPos( w / 2 - btnHighscores.width(), y );
-			btnBadges		.setPos( w / 2, y );
-			btnPlay			.setPos( btnHighscores.left() - btnPlay.width(), y );
-			btnAbout		.setPos( btnBadges.right(), y );
-		} else {
-			btnBadges.setPos( w / 2 - btnBadges.width(), (h + height) / 2 - DashboardItem.SIZE );
-			btnAbout.setPos( w / 2, (h + height) / 2 - DashboardItem.SIZE );
-			btnPlay.setPos( w / 2 - btnPlay.width(), btnAbout.top() - DashboardItem.SIZE );
-			btnHighscores.setPos( w / 2, btnPlay.top() );
-		}
+
+        DashboardItem btnAlmanac = new DashboardItem( TXT_ALMANAC, 4 ) {
+            @Override
+            protected void onClick() { PixelDungeonExtended.switchNoFade( AlmanacScene.class );
+            }
+        };
+		add( btnAlmanac );
 		
 		BitmapText version = new BitmapText( "v " + Game.version, font1x );
 		version.measure();
@@ -149,7 +144,22 @@ public class TitleScene extends PixelScene {
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos( w - btnExit.width(), 0 );
 		add( btnExit );
-		
+
+		if (PixelDungeonExtended.landscape()) {
+			float y = (h + height) / 2 - DashboardItem.SIZE;
+			btnHighscores	.setPos( w / 2 - btnHighscores.width(), y );
+			btnBadges		.setPos( w / 2, y );
+			btnPlay			.setPos( btnHighscores.left() - btnPlay.width(), y );
+			btnAbout		.setPos( btnBadges.right(), y );
+			btnAlmanac		.setPos( 0, btnPrefs.height() + btnAlmanac.height() );
+		} else {
+			btnBadges.setPos( w / 2 - btnBadges.width(), (h + height) / 2 - DashboardItem.SIZE );
+			btnAbout.setPos( w / 2, (h + height) / 2 - DashboardItem.SIZE );
+			btnPlay.setPos( w / 2 - btnPlay.width(), btnAbout.top() - DashboardItem.SIZE );
+			btnHighscores.setPos( w / 2, btnPlay.top() );
+			btnAlmanac		.setPos( 0, btnPrefs.height() + btnAlmanac.height() );
+		}
+
 		fadeIn();
 	}
 	
@@ -160,7 +170,7 @@ public class TitleScene extends PixelScene {
 	}
 	
 	private static class DashboardItem extends Button {
-		
+
 		public static final float SIZE	= 48;
 		
 		private static final int IMAGE_SIZE	= 32;
@@ -169,14 +179,17 @@ public class TitleScene extends PixelScene {
 		private BitmapText label;
 		
 		public DashboardItem( String text, int index ) {
-			super();
-			
-			image.frame( image.texture.uvRect( index * IMAGE_SIZE, 0, (index + 1) * IMAGE_SIZE, IMAGE_SIZE ) );
-			this.label.text( text );
-			this.label.measure();
-			
-			setSize( SIZE, SIZE );
-		}
+            super();
+
+            image.frame(image.texture.uvRect(index * IMAGE_SIZE, 0, (index + 1) * IMAGE_SIZE, IMAGE_SIZE));
+            this.label.text(text);
+            this.label.measure();
+            if (!text.equals(TXT_ALMANAC)) {
+                setSize(SIZE, SIZE);
+            } else {
+                setSize(30, 10);
+            }
+        }
 		
 		@Override
 		protected void createChildren() {
