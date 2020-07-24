@@ -1,12 +1,12 @@
 Pixel Dungeon
 =============
 
-This is a fork of Watabou's Pixel Dungeon by mdsimmo which was the forked by me. This repo was made for a college project,
-The additonal features added includes...
+This is a fork of Watabou's Pixel Dungeon by mdsimmo's which was the forked by me. This repo was made for a college project,
+The additional features added includes...
 1. Extra levels (work in progress)
 2. Weapons/Armours (work in progress)
-3. An almaniac for mob/items etc (work in progress)
-4. A more visually pleasing diplay for hunger. (work in progress)
+3. An almanac for mob/items etc (work in progress)
+4. A more visually pleasing display for hunger. (work in progress)
 5. A stat comparison pup-up for items. (work in progress)
 
 To setup Pixel Dungeon:
@@ -23,12 +23,12 @@ found here: https://github.com/ConnahGriffin/PD-classes
 
 ## What's different?
 
-Primarilly, this repo has all the gradle build files included so you can easilly start using
+Primarily, this repo has all the gradle build files included so you can easily start using
 the project with an IDE.
 
 This project also fixes several small compile issues and several oddities in the code.
 
-## Common prolems
+## Common problems
 
 ### Opening the project in Android Studio results in "Configuration with name 'default' not found"
 That's probably because you cloned the repo without the '--recursive' part. To fix it, run the 
