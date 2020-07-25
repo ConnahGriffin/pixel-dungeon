@@ -407,7 +407,7 @@ public abstract class Wand extends KindOfWeapon {
 		curChargeKnown = bundle.getBoolean( CUR_CHARGE_KNOWN );
 	}
 	
-	protected static CellSelector.Listener zapper = new  CellSelector.Listener() {
+	protected static final CellSelector.Listener zapper = new  CellSelector.Listener() {
 		
 		@Override
 		public void onSelect( Integer target ) {

@@ -26,7 +26,7 @@ import com.pdextended.utils.Callback;
 
 public class TenguSprite extends MobSprite {
 	
-	private Animation cast;
+	private final Animation cast;
 	
 	public TenguSprite() {
 		super();

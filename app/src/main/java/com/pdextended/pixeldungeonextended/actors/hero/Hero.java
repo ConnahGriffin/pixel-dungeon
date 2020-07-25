@@ -154,7 +154,7 @@ public class Hero extends Char {
 	public boolean restoreHealth = false;
 	
 	public MissileWeapon rangedWeapon = null;
-	public Belongings belongings;
+	public final Belongings belongings;
 	
 	public int STR;
 	public boolean weakened = false;

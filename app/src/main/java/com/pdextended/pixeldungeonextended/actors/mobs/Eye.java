@@ -100,7 +100,6 @@ public class Eye extends Mob {
 			if (Dungeon.visible[Ballistica.trace[i]]) {
 				rayVisible = true;
 				break;
-				break;
 			}
 		}
 		

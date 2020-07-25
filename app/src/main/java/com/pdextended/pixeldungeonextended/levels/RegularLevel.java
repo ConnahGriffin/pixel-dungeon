@@ -339,7 +339,7 @@ public abstract class RegularLevel extends Level {
 	}
 	
 	protected int minRoomSize = 7;
-	protected int maxRoomSize = 9;
+	protected final int maxRoomSize = 9;
 	
 	protected void split( Rect rect ) {
 		

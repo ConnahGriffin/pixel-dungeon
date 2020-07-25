@@ -37,7 +37,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	private BitmapTextMultiline lastEntry;
 	private int lastColor;
 
-	private static ArrayList<Entry> entries = new ArrayList<>();
+	private static final ArrayList<Entry> entries = new ArrayList<>();
 	
 	public GameLog() {
 		super();
@@ -144,7 +144,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 
 	private static class Entry {
 		public String text;
-		public int color;
+		public final int color;
 		public Entry( String text, int color ) {
 			this.text = text;
 			this.color = color;

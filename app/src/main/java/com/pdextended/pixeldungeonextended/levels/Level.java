@@ -102,18 +102,18 @@ public abstract class Level implements Bundlable {
 	
 	public int viewDistance = Dungeon.isChallenged( Challenges.DARKNESS ) ? 3: 8;
 	
-	public static boolean[] fieldOfView = new boolean[LENGTH];
+	public static final boolean[] fieldOfView = new boolean[LENGTH];
 	
-	public static boolean[] passable	= new boolean[LENGTH];
-	public static boolean[] losBlocking	= new boolean[LENGTH];
-	public static boolean[] flamable	= new boolean[LENGTH];
-	public static boolean[] secret		= new boolean[LENGTH];
-	public static boolean[] solid		= new boolean[LENGTH];
-	public static boolean[] avoid		= new boolean[LENGTH];
-	public static boolean[] water		= new boolean[LENGTH];
-	public static boolean[] pit			= new boolean[LENGTH];
+	public static final boolean[] passable	= new boolean[LENGTH];
+	public static final boolean[] losBlocking	= new boolean[LENGTH];
+	public static final boolean[] flamable	= new boolean[LENGTH];
+	public static final boolean[] secret		= new boolean[LENGTH];
+	public static final boolean[] solid		= new boolean[LENGTH];
+	public static final boolean[] avoid		= new boolean[LENGTH];
+	public static final boolean[] water		= new boolean[LENGTH];
+	public static final boolean[] pit			= new boolean[LENGTH];
 	
-	public static boolean[] discoverable	= new boolean[LENGTH];
+	public static final boolean[] discoverable	= new boolean[LENGTH];
 	
 	public Feeling feeling = Feeling.NONE;
 	
@@ -125,7 +125,7 @@ public abstract class Level implements Bundlable {
 	public HashMap<Class<? extends Blob>,Blob> blobs;
 	public SparseArray<Plant> plants;
 	
-	protected ArrayList<Item> itemsToSpawn = new ArrayList<>();
+	protected final ArrayList<Item> itemsToSpawn = new ArrayList<>();
 	
 	public int color1 = 0x004400;
 	public int color2 = 0x88CC44;

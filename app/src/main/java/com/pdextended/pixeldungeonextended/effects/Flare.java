@@ -43,12 +43,12 @@ public class Flare extends Visual {
 	
 	private boolean lightMode = true;
 	
-	private SmartTexture texture;
+	private final SmartTexture texture;
 	
-	private FloatBuffer vertices;
-	private ShortBuffer indices;
+	private final FloatBuffer vertices;
+	private final ShortBuffer indices;
 	
-	private int nRays;
+	private final int nRays;
 	
 	@SuppressLint("FloatMath")
 	public Flare( int nRays, float radius ) {

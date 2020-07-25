@@ -44,7 +44,7 @@ public class WndBlacksmith extends Window {
 	
 	private ItemButton btnItem1;
 	private ItemButton btnItem2;
-	private RedButton btnReforge;
+	private final RedButton btnReforge;
 	
 	private static final String TXT_PROMPT =
 		"Ok, a deal is a deal, dat's what I can do for you: I can reforge " +
@@ -105,7 +105,7 @@ public class WndBlacksmith extends Window {
 		resize( WIDTH, (int)btnReforge.bottom() );
 	}
 	
-	protected WndBag.Listener itemSelector = new WndBag.Listener() {
+	protected final WndBag.Listener itemSelector = new WndBag.Listener() {
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {

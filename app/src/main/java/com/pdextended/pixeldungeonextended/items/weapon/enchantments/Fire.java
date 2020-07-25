@@ -30,7 +30,7 @@ public class Fire extends Weapon.Enchantment {
 
 	private static final String TXT_BLAZING	= "blazing %s";
 	
-	private static ItemSprite.Glowing ORANGE = new ItemSprite.Glowing( 0xFF4400 );
+	private static final ItemSprite.Glowing ORANGE = new ItemSprite.Glowing( 0xFF4400 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

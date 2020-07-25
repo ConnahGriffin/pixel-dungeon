@@ -53,10 +53,10 @@ public class Almanac {
     public enum Item_Index {;
         //add new entries here
 
-        public boolean meta;
+        public final boolean meta;
 
-        public String description;
-        public int image;
+        public final String description;
+        public final int image;
 
         Item_Index(String description, int image) {
             this(description, image, false);

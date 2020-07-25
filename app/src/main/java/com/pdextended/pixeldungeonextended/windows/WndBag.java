@@ -75,12 +75,12 @@ public class WndBag extends WndTabbed {
 	
 	protected static final int TITLE_HEIGHT	= 12;
 	
-	private Listener listener;
-	private WndBag.Mode mode;
-	private String title;
+	private final Listener listener;
+	private final WndBag.Mode mode;
+	private final String title;
 	
-	private int nCols;
-	private int nRows;
+	private final int nCols;
+	private final int nRows;
 	
 	protected int count;
 	protected int col;
@@ -234,9 +234,9 @@ public class WndBag extends WndTabbed {
 	
 	private class BagTab extends Tab {
 		
-		private Image icon;
+		private final Image icon;
 
-		private Bag bag;
+		private final Bag bag;
 		
 		public BagTab( Bag bag ) {
 			super();
@@ -310,7 +310,7 @@ public class WndBag extends WndTabbed {
 		
 		private static final int NBARS	= 3;
 		
-		private Item item;
+		private final Item item;
 		private ColorBlock bg;
 		
 		private ColorBlock[] durability;

@@ -90,13 +90,16 @@ public class Item implements Bundlable {
 	
 	public boolean unique = false;
 	
-	private static Comparator<Item> itemComparator = new Comparator<Item>() {	
+	private static final Comparator<Item> itemComparator = new Comparator<Item>() {
 		@Override
 		public int compare( Item lhs, Item rhs ) {
 			return Generator.Category.order( lhs ) - Generator.Category.order( rhs );
 		}
 	};
-	
+
+	public Item() {
+	}
+
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = new ArrayList<>();
 		actions.add( AC_DROP );
@@ -579,7 +582,7 @@ public class Item implements Bundlable {
 	
 	protected static Hero curUser = null;
 	protected static Item curItem = null;
-	protected static CellSelector.Listener thrower = new CellSelector.Listener() {
+	protected static final CellSelector.Listener thrower = new CellSelector.Listener() {
 		@Override
 		public void onSelect( Integer target ) {
 			if (target != null) {

@@ -347,7 +347,7 @@ public class Ring extends EquipableItem {
 		
 		private static final String TXT_KNOWN = "This is a %s"; 
 		
-		public int level;
+		public final int level;
 		public RingBuff() {
 			level = Ring.this.effectiveLevel();
 		}

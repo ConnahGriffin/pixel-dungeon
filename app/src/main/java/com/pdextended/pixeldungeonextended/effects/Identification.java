@@ -28,7 +28,7 @@ import com.pdextended.utils.Random;
 
 public class Identification extends Group {
 
-	private static int[] DOTS = {
+	private static final int[] DOTS = {
 		-1, -3,
 		 0, -3,
 		+1, -3,

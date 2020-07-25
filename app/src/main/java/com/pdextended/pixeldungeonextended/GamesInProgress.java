@@ -24,7 +24,7 @@ import com.pdextended.utils.Bundle;
 
 public class GamesInProgress {
 
-	private static HashMap<HeroClass, Info> state = new HashMap<>();
+	private static final HashMap<HeroClass, Info> state = new HashMap<>();
 	
 	public static Info check( HeroClass cl ) {
 		

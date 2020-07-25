@@ -121,7 +121,7 @@ public class Fireball extends Component {
 	
 	public static class Flame extends Image {
 		
-		private static float LIFESPAN	= 1f;
+		private static final float LIFESPAN	= 1f;
 
         private float timeLeft;
 		

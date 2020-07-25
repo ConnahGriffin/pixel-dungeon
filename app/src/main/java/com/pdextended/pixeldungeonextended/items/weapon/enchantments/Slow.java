@@ -28,7 +28,7 @@ public class Slow extends Weapon.Enchantment {
 
 	private static final String TXT_CHILLING = "chilling %s";
 	
-	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0044FF );
+	private static final ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0044FF );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

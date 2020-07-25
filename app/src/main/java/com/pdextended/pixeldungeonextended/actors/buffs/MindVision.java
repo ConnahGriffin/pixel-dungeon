@@ -24,7 +24,7 @@ public class MindVision extends FlavourBuff {
 
 	public static final float DURATION = 20f;
 	
-	public int distance = 2;
+	public final int distance = 2;
 	
 	@Override
 	public int icon() {

@@ -37,14 +37,14 @@ public class Lightning extends Group {
 	
 	private float life;
 	
-	private int length;
-	private float[] cx;
-	private float[] cy;
+	private final int length;
+	private final float[] cx;
+	private final float[] cy;
 	
-	private Image[] arcsS;
-	private Image[] arcsE;
+	private final Image[] arcsS;
+	private final Image[] arcsE;
 	
-	private Callback callback;
+	private final Callback callback;
 	
 	public Lightning( int[] cells, int length, Callback callback ) {
 		

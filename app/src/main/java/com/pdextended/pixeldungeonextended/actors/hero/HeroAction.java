@@ -49,7 +49,7 @@ public class HeroAction {
 	}
 	
 	public static class Interact extends HeroAction {
-		public NPC npc;
+		public final NPC npc;
 		public Interact( NPC npc ) {
 			this.npc = npc;
 		}
@@ -80,7 +80,7 @@ public class HeroAction {
 	}
 	
 	public static class Attack extends HeroAction {
-		public Char target;
+		public final Char target;
 		public Attack( Char target ) {
 			this.target = target;
 		}

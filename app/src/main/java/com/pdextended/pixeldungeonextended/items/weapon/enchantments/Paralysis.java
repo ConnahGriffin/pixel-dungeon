@@ -28,7 +28,7 @@ public class Paralysis extends Weapon.Enchantment {
 
 	private static final String TXT_STUNNING = "stunning %s";
 	
-	private static ItemSprite.Glowing YELLOW = new ItemSprite.Glowing( 0xCCAA44 );
+	private static final ItemSprite.Glowing YELLOW = new ItemSprite.Glowing( 0xCCAA44 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

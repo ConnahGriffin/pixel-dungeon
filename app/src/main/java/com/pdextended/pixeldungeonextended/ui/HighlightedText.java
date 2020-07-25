@@ -7,8 +7,8 @@ import com.pdextended.utils.Highlighter;
 
 public class HighlightedText extends Component {
 
-	protected BitmapTextMultiline normal;
-	protected BitmapTextMultiline highlighted;
+	protected final BitmapTextMultiline normal;
+	protected final BitmapTextMultiline highlighted;
 	
 	protected int nColor = 0xFFFFFF;
 	protected int hColor = 0xFFFF44;

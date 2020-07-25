@@ -230,7 +230,7 @@ public class CavesLevel extends RegularLevel {
 	
 	private static class Vein extends Group {
 		
-		private int pos;
+		private final int pos;
 		
 		private float delay;
 		

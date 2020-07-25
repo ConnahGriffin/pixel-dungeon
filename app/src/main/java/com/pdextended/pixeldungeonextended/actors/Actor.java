@@ -95,14 +95,14 @@ public abstract class Actor implements Bundlable {
 	// **********************
 	// *** Static members ***
 	
-	private static HashSet<Actor> all = new HashSet<>();
+	private static final HashSet<Actor> all = new HashSet<>();
 	private static Actor current;
 	
-	private static SparseArray<Actor> ids = new SparseArray<>();
+	private static final SparseArray<Actor> ids = new SparseArray<>();
 	
 	private static float now = 0;
 	
-	private static Char[] chars = new Char[Level.LENGTH];
+	private static final Char[] chars = new Char[Level.LENGTH];
 	
 	public static void clear() {
 		

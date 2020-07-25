@@ -37,9 +37,9 @@ public class Belongings implements Iterable<Item> {
 
 	public static final int BACKPACK_SIZE	= 19;
 	
-	private Hero owner;
+	private final Hero owner;
 	
-	public Bag backpack;	
+	public final Bag backpack;
 
 	public KindOfWeapon weapon = null;
 	public Armor armor = null;
@@ -244,10 +244,10 @@ public class Belongings implements Iterable<Item> {
 
 		private int index = 0;
 		
-		private Iterator<Item> backpackIterator = backpack.iterator();
+		private final Iterator<Item> backpackIterator = backpack.iterator();
 		
-		private Item[] equipped = {weapon, armor, ring1, ring2};
-		private int backpackIndex = equipped.length;
+		private final Item[] equipped = {weapon, armor, ring1, ring2};
+		private final int backpackIndex = equipped.length;
 		
 		@Override
 		public boolean hasNext() {

@@ -23,7 +23,7 @@ import com.pdextended.utils.Random;
 
 public class SeniorSprite extends MobSprite {
 	
-	private Animation kick;
+	private final Animation kick;
 	
 	public SeniorSprite() {
 		super();

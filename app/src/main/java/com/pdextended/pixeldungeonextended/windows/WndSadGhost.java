@@ -28,8 +28,8 @@ public class WndSadGhost extends WndQuest {
 	private static final String TXT_WEAPON	= "Ghost's weapon";
 	private static final String TXT_ARMOR	= "Ghost's armor";
 	
-	private Ghost ghost;
-	private Item questItem;
+	private final Ghost ghost;
+	private final Item questItem;
 	
 	public WndSadGhost( final Ghost ghost, final Item item, String text ) {
 		

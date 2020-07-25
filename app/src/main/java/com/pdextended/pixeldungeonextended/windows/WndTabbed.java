@@ -31,7 +31,7 @@ import com.pdextended.pixeldungeonextended.ui.Window;
 
 public class WndTabbed extends Window {
 
-	protected ArrayList<Tab> tabs = new ArrayList<>();
+	protected final ArrayList<Tab> tabs = new ArrayList<>();
 	protected Tab selected;
 	
 	public WndTabbed() {

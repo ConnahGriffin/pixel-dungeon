@@ -26,7 +26,7 @@ public class Tempering extends Weapon.Enchantment {
 
 	private static final String TXT_TEMPERED	= "tempered %s";
 	
-	private static ItemSprite.Glowing GRAY = new ItemSprite.Glowing( 0xCC8888 );
+	private static final ItemSprite.Glowing GRAY = new ItemSprite.Glowing( 0xCC8888 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

@@ -32,7 +32,7 @@ public class ScrollPane extends Component {
 	protected static final float THUMB_ALPHA	= 0.5f;
 	
 	protected TouchController controller;
-	protected Component content;
+	protected final Component content;
 	protected ColorBlock thumb;
 	
 	protected float minX;
@@ -105,7 +105,7 @@ public class ScrollPane extends Component {
 	
 	public class TouchController extends TouchArea {
 		
-		private float dragThreshold;
+		private final float dragThreshold;
 		
 		public TouchController() {
 			super( 0, 0, 0, 0 );
@@ -128,7 +128,7 @@ public class ScrollPane extends Component {
 		}	
 		
 		private boolean dragging = false;
-		private PointF lastPos = new PointF();
+		private final PointF lastPos = new PointF();
 		
 		@Override
 		protected void onDrag( Touch t ) {		

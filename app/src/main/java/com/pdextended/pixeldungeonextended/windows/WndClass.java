@@ -35,7 +35,7 @@ public class WndClass extends WndTabbed {
 	
 	private static final int TAB_WIDTH	= 50;
 	
-	private HeroClass cl;
+	private final HeroClass cl;
 
 	public WndClass( HeroClass cl ) {
 		
@@ -70,7 +70,7 @@ public class WndClass extends WndTabbed {
 
 	private class RankingTab extends LabeledTab {
 		
-		private Group page;
+		private final Group page;
 		
 		public RankingTab( String label, Group page ) {
 			super( label );
@@ -93,7 +93,7 @@ public class WndClass extends WndTabbed {
 		
 		private static final String DOT	= "\u007F";
 		
-		public float height;
+		public final float height;
 		public float width;
 		
 		public PerksTab() {
@@ -142,8 +142,8 @@ public class WndClass extends WndTabbed {
 		
 		private static final int MARGIN	= 4;
 
-		public float height;
-		public float width;
+		public final float height;
+		public final float width;
 		
 		public MasteryTab() {
 			super();

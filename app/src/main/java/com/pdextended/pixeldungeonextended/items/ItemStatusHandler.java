@@ -27,11 +27,11 @@ import com.pdextended.utils.Random;
 
 public class ItemStatusHandler<T extends Item> {
 
-	private Class<? extends T>[] items;
+	private final Class<? extends T>[] items;
 	
-	private HashMap<Class<? extends T>, Integer> images;
-	private HashMap<Class<? extends T>, String> labels;
-	private HashSet<Class<? extends T>> known;
+	private final HashMap<Class<? extends T>, Integer> images;
+	private final HashMap<Class<? extends T>, String> labels;
+	private final HashSet<Class<? extends T>> known;
 	
 	public ItemStatusHandler( Class<? extends T>[] items, String[] allLabels, Integer[] allImages ) {
 		

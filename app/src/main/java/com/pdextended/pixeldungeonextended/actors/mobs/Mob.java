@@ -52,11 +52,11 @@ public abstract class Mob extends Char {
 	protected static final String TXT_RAGE		= "#$%^";
 	protected static final String TXT_EXP		= "%+dEXP";
 	
-	public AiState SLEEPEING	= new Sleeping();
-	public AiState HUNTING		= new Hunting();
+	public final AiState SLEEPEING	= new Sleeping();
+	public final AiState HUNTING		= new Hunting();
 	public AiState WANDERING	= new Wandering();
 	public AiState FLEEING		= new Fleeing();
-	public AiState PASSIVE		= new Passive();
+	public final AiState PASSIVE		= new Passive();
 	public AiState state = SLEEPEING;
 	
 	public Class<? extends CharSprite> spriteClass;

@@ -34,7 +34,7 @@ public final class ShadowCaster {
 	private static boolean[] losBlocking;
 	private static boolean[] fieldOfView;
 	
-	private static int[][] rounding;
+	private static final int[][] rounding;
 	static {
 		rounding = new int[MAX_DISTANCE+1][];
 		for (int i=1; i <= MAX_DISTANCE; i++) {
@@ -45,7 +45,7 @@ public final class ShadowCaster {
 		}
 	}
 	
-	private static Obstacles obs = new Obstacles();
+	private static final Obstacles obs = new Obstacles();
 	
 	public static void castShadow( int x, int y, boolean[] fieldOfView, int distance ) {
 
@@ -109,9 +109,9 @@ public final class ShadowCaster {
 	
 	private static final class Obstacles {
 		
-		private static int SIZE = (MAX_DISTANCE+1) * (MAX_DISTANCE+1) / 2;
-		private static float[] a1 = new float[SIZE];
-		private static float[] a2 = new float[SIZE];
+		private static final int SIZE = (MAX_DISTANCE+1) * (MAX_DISTANCE+1) / 2;
+		private static final float[] a1 = new float[SIZE];
+		private static final float[] a2 = new float[SIZE];
 		
 		private int length;
 		private int limit;

@@ -21,7 +21,7 @@ import com.pdextended.pixeldungeonextended.ui.BuffIndicator;
 
 public class Fury extends Buff {
 	
-	public static float LEVEL	= 0.4f;
+	public static final float LEVEL	= 0.4f;
 	
 	@Override
 	public boolean act() {

@@ -26,7 +26,7 @@ import com.pdextended.pixeldungeonextended.sprites.CharSprite;
 
 public class TorchHalo extends Halo {
 
-	private CharSprite target;
+	private final CharSprite target;
 	
 	private float phase = 0;
 	

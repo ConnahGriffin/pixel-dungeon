@@ -28,7 +28,7 @@ public class AutoRepair extends Glyph {
 
 	private static final String TXT_AUTO_REPAIR	= "%s of auto-repair";
 
-	private static Glowing GRAY = new Glowing( 0xCC8888 );
+	private static final Glowing GRAY = new Glowing( 0xCC8888 );
 	
 	@Override
 	public int proc( Armor armor, Char attacker, Char defender, int damage) {

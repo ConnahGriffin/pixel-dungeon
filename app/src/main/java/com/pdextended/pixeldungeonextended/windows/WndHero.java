@@ -50,11 +50,11 @@ public class WndHero extends WndTabbed {
 	private static final int WIDTH		= 100;
 	private static final int TAB_WIDTH	= 40;
 	
-	private StatsTab stats;
-	private BuffsTab buffs;
+	private final StatsTab stats;
+	private final BuffsTab buffs;
 	
-	private SmartTexture icons;
-	private TextureFilm film;
+	private final SmartTexture icons;
+	private final TextureFilm film;
 	
 	public WndHero() {
 		

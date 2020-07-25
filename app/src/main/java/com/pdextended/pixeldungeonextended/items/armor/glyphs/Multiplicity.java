@@ -36,7 +36,7 @@ public class Multiplicity extends Glyph {
 
 	private static final String TXT_MULTIPLICITY	= "%s of multiplicity";
 	
-	private static ItemSprite.Glowing PINK = new ItemSprite.Glowing( 0xCCAA88 );
+	private static final ItemSprite.Glowing PINK = new ItemSprite.Glowing( 0xCCAA88 );
 	
 	@Override
 	public int proc( Armor armor, Char attacker, Char defender, int damage) {

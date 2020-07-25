@@ -30,7 +30,7 @@ public class Death extends Weapon.Enchantment {
 
 	private static final String TXT_GRIM	= "grim %s";
 	
-	private static ItemSprite.Glowing BLACK = new ItemSprite.Glowing( 0x000000 );
+	private static final ItemSprite.Glowing BLACK = new ItemSprite.Glowing( 0x000000 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

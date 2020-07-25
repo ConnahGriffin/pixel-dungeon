@@ -41,9 +41,9 @@ public class WandOfLightning extends Wand {
 		name = "Wand of Lightning";
 	}
 	
-	private ArrayList<Char> affected = new ArrayList<>();
+	private final ArrayList<Char> affected = new ArrayList<>();
 	
-	private int[] points = new int[20];
+	private final int[] points = new int[20];
 	private int nPoints;
 	
 	@Override

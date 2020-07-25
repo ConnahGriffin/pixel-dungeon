@@ -213,11 +213,11 @@ public class ItemSprite extends MovieClip {
 		
 		public static final Glowing WHITE = new Glowing( 0xFFFFFF, 0.6f );
 		
-		public int color;
-		public float red;
-		public float green;
-		public float blue;
-		public float period;
+		public final int color;
+		public final float red;
+		public final float green;
+		public final float blue;
+		public final float period;
 		
 		public Glowing( int color ) {
 			this( color, 1f );

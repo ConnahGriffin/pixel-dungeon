@@ -26,9 +26,9 @@ import com.pdextended.utils.PointF;
 
 public class Pushing extends Actor {
 
-	private CharSprite sprite;
-	private int from;
-	private int to;
+	private final CharSprite sprite;
+	private final int from;
+	private final int to;
 	
 	private Effect effect;
 	
@@ -58,7 +58,7 @@ public class Pushing extends Actor {
 
 		private static final float DELAY = 0.15f;
 		
-		private PointF end;
+		private final PointF end;
 		
 		private float delay;
 		

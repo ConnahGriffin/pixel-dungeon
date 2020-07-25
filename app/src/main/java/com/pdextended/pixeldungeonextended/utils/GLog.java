@@ -30,7 +30,7 @@ public class GLog {
 	public static final String WARNING		= "** ";
 	public static final String HIGHLIGHT	= "@@ ";
 	
-	public static Signal<String> update = new Signal<>();
+	public static final Signal<String> update = new Signal<>();
 	
 	public static void i( String text, Object... args ) {
 		

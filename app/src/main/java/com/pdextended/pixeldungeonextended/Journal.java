@@ -38,7 +38,7 @@ public class Journal {
 		TROLL					( "Troll blacksmith" ),
 		IMP						( "Ambitious imp" );
 		
-		public String desc;
+		public final String desc;
 		
 		Feature(String desc) {
 			this.desc = desc;

@@ -29,7 +29,7 @@ public class Utils {
 		return String.format( Locale.ENGLISH, format, args );
 	}
 	
-	public static String VOWELS	= "aoeiu";
+	public static final String VOWELS	= "aoeiu";
 	
 	public static String indefinite( String noun ) {
 		if (noun.length() == 0) {

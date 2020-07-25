@@ -28,7 +28,7 @@ public class Poison extends Weapon.Enchantment {
 
 	private static final String TXT_VENOMOUS	= "venomous %s";
 	
-	private static ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x4400AA );
+	private static final ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x4400AA );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

@@ -34,7 +34,7 @@ public class Entanglement extends Glyph {
 
 	private static final String TXT_ENTANGLEMENT	= "%s of entanglement";
 	
-	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x448822 );
+	private static final ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x448822 );
 	
 	@Override
 	public int proc( Armor armor, Char attacker, Char defender, int damage ) {

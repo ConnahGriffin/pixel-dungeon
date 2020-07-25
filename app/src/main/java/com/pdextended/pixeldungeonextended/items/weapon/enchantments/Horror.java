@@ -31,7 +31,7 @@ public class Horror extends Weapon.Enchantment {
 
 	private static final String TXT_ELDRITCH	= "eldritch %s";
 	
-	private static ItemSprite.Glowing GREY = new ItemSprite.Glowing( 0x222222 );
+	private static final ItemSprite.Glowing GREY = new ItemSprite.Glowing( 0x222222 );
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

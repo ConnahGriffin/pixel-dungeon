@@ -116,9 +116,9 @@ public class AlmanacScene extends PixelScene {
 
     private static class AlmanacButton extends Button {
 
-        private Almanac.Item_Index almanac;
+        private final Almanac.Item_Index almanac;
 
-        private Image icon;
+        private final Image icon;
 
         public AlmanacButton( Almanac.Item_Index almanac ) {
             super();

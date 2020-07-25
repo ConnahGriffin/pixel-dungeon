@@ -33,7 +33,7 @@ public class Potential extends Glyph {
 
 	private static final String TXT_POTENTIAL	= "%s of potential";
 	
-	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x66CCEE );
+	private static final ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x66CCEE );
 	
 	@Override
 	public int proc( Armor armor, Char attacker, Char defender, int damage) {

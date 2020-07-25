@@ -47,10 +47,10 @@ public class WndInfoMob extends WndTitledMessage {
 		
 		private static final int GAP	= 2;
 		
-		private CharSprite image;
-		private BitmapText name;
-		private HealthBar health;
-		private BuffIndicator buffs;
+		private final CharSprite image;
+		private final BitmapText name;
+		private final HealthBar health;
+		private final BuffIndicator buffs;
 		
 		public MobTitle( Mob mob ) {
 			

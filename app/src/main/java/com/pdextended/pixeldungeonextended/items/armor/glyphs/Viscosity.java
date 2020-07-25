@@ -37,7 +37,7 @@ public class Viscosity extends Glyph {
 
 	private static final String TXT_VISCOSITY	= "%s of viscosity";
 	
-	private static ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x8844CC );
+	private static final ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x8844CC );
 	
 	@Override
 	public int proc( Armor armor, Char attacker, Char defender, int damage ) {

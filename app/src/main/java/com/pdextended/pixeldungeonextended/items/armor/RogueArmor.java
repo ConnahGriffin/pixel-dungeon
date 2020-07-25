@@ -74,7 +74,7 @@ public class RogueArmor extends ClassArmor {
 			"(though no real explosives are used): he blinds enemies who could see him and jumps aside.";
 	}
 	
-	protected static CellSelector.Listener teleporter = new  CellSelector.Listener() {
+	protected static final CellSelector.Listener teleporter = new  CellSelector.Listener() {
 		
 		@Override
 		public void onSelect( Integer target ) {

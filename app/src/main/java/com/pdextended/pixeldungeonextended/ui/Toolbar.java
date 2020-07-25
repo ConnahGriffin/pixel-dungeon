@@ -178,7 +178,7 @@ public class Toolbar extends Component {
 		instance.layout();
 	}
 	
-	private static CellSelector.Listener informer = new CellSelector.Listener() {
+	private static final CellSelector.Listener informer = new CellSelector.Listener() {
 		@Override
 		public void onSelect( Integer cell ) {
 			

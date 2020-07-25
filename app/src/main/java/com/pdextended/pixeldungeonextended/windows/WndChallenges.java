@@ -35,8 +35,8 @@ public class WndChallenges extends Window {
 	
 	private static final String TITLE	= "Challenges";
 	
-	private boolean editable;
-	private ArrayList<CheckBox> boxes;	
+	private final boolean editable;
+	private final ArrayList<CheckBox> boxes;
 	
 	public WndChallenges( int checked, boolean editable ) {
 		

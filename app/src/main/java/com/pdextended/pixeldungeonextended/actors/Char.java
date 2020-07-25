@@ -89,7 +89,7 @@ public abstract class Char extends Actor {
 	
 	public int viewDistance	= 8;
 	
-	private HashSet<Buff> buffs = new HashSet<>();
+	private final HashSet<Buff> buffs = new HashSet<>();
 	
 	@Override
 	protected boolean act() {

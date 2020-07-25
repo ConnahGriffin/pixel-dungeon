@@ -41,7 +41,7 @@ public class Bag extends Item implements Iterable<Item> {
 	
 	public Char owner;
 	
-	public ArrayList<Item> items = new ArrayList<>();
+	public final ArrayList<Item> items = new ArrayList<>();
 	
 	public int size = 1;
 	

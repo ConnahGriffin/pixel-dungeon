@@ -40,8 +40,8 @@ import com.pdextended.utils.Callback;
 
 public class WarriorArmor extends ClassArmor {
 	
-	private static int LEAP_TIME	= 1;
-	private static int SHOCK_TIME	= 3;
+	private static final int LEAP_TIME	= 1;
+	private static final int SHOCK_TIME	= 3;
 	
 	private static final String AC_SPECIAL = "HEROIC LEAP"; 
 	
@@ -79,7 +79,7 @@ public class WarriorArmor extends ClassArmor {
 			"a targeted location, slamming down to stun all neighbouring enemies.";
 	}
 	
-	protected static CellSelector.Listener leaper = new  CellSelector.Listener() {
+	protected static final CellSelector.Listener leaper = new  CellSelector.Listener() {
 		
 		@Override
 		public void onSelect( Integer target ) {

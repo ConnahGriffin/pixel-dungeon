@@ -48,10 +48,10 @@ public class WndCatalogus extends WndTabbed {
 	private static final String TXT_SCROLLS	= "Scrolls";
 	private static final String TXT_TITLE	= "Catalogus";
 	
-	private BitmapText txtTitle;
-	private ScrollPane list;
+	private final BitmapText txtTitle;
+	private final ScrollPane list;
 	
-	private ArrayList<ListItem> items = new ArrayList<>();
+	private final ArrayList<ListItem> items = new ArrayList<>();
 	
 	private static boolean showPotions = true;
 	

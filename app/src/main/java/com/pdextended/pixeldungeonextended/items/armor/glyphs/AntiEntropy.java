@@ -35,7 +35,7 @@ public class AntiEntropy extends Glyph {
 
 	private static final String TXT_ANTI_ENTROPY	= "%s of anti-entropy";
 	
-	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0000FF );
+	private static final ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0000FF );
 	
 	@Override
 	public int proc( Armor armor, Char attacker, Char defender, int damage) {
