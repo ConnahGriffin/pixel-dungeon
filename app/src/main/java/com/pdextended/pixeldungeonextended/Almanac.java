@@ -92,10 +92,10 @@ public class Almanac {
         HashSet<Item_Index> almanac = new HashSet<>();
 
         String[] names = bundle.getStringArray(ALMANAC);
-        for (int i = 0; i < names.length; i++) {
+        for (String name : names) {
             try {
-                almanac.add(Item_Index.valueOf(names[i]));
-            } catch (Exception e) {
+                almanac.add(Item_Index.valueOf(name));
+            } catch (Exception ignored) {
             }
         }
 
@@ -149,7 +149,7 @@ public class Almanac {
                 Bundle.write(bundle, output);
                 output.close();
                 saveNeeded = false;
-            } catch (IOException e) {
+            } catch (IOException ignored) {
 
             }
         }

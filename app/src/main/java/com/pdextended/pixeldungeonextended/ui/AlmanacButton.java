@@ -23,7 +23,6 @@ import com.pdextended.noosa.ui.Button;
 import com.pdextended.pixeldungeonextended.Assets;
 import com.pdextended.pixeldungeonextended.PixelDungeonExtended;
 import com.pdextended.pixeldungeonextended.scenes.AlmanacScene;
-import com.pdextended.pixeldungeonextended.windows.WndSettings;
 
 public class AlmanacButton extends Button {
 

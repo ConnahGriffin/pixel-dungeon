@@ -76,13 +76,12 @@ public class ScrollOfRemoveCurse extends Scroll {
 	public static boolean uncurse( Hero hero, Item... items ) {
 		
 		boolean procced = false;
-		for (int i=0; i < items.length; i++) {
-			Item item = items[i];
-			if (item != null && item.cursed) {
-				item.cursed = false;
-				procced = true;
-			}
-		}
+        for (Item item : items) {
+            if (item != null && item.cursed) {
+                item.cursed = false;
+                procced = true;
+            }
+        }
 		
 		if (procced) {
 			hero.sprite.emitter().start( ShadowParticle.UP, 0.05f, 10 );

@@ -29,7 +29,6 @@ import com.pdextended.noosa.audio.Music;
 import com.pdextended.noosa.audio.Sample;
 import com.pdextended.noosa.ui.Button;
 import com.pdextended.pixeldungeonextended.Assets;
-import com.pdextended.pixeldungeonextended.BuildConfig;
 import com.pdextended.pixeldungeonextended.PixelDungeonExtended;
 import com.pdextended.pixeldungeonextended.effects.BannerSprites;
 import com.pdextended.pixeldungeonextended.effects.Fireball;

@@ -21,12 +21,12 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
+import java.lang.Math;
 
 import javax.microedition.khronos.opengles.GL10;
 
 import android.annotation.SuppressLint;
 import android.opengl.GLES20;
-import android.util.FloatMath;
 
 import com.pdextended.gltextures.Gradient;
 import com.pdextended.gltextures.SmartTexture;

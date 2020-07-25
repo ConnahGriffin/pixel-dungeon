@@ -55,32 +55,31 @@ public class PotionOfPurity extends Potion {
 			Dungeon.level.blobs.get( ToxicGas.class ), 
 			Dungeon.level.blobs.get( ParalyticGas.class )
 		};
-		
-		for (int j=0; j < blobs.length; j++) {
-			
-			Blob blob = blobs[j];
-			if (blob == null) {
-				continue;
-			}
-			
-			for (int i=0; i < Level.LENGTH; i++) {
-				if (PathFinder.distance[i] < Integer.MAX_VALUE) {
-					
-					int value = blob.cur[i]; 
-					if (value > 0) {
-						
-						blob.cur[i] = 0;
-						blob.volume -= value;
-						procd = true;
-						
-						if (Dungeon.visible[i]) {
-							CellEmitter.get( i ).burst( Speck.factory( Speck.DISCOVER ), 1 );
-						}
-					}
 
-				}
-			}
-		}
+        for (Blob blob : blobs) {
+
+            if (blob == null) {
+                continue;
+            }
+
+            for (int i = 0; i < Level.LENGTH; i++) {
+                if (PathFinder.distance[i] < Integer.MAX_VALUE) {
+
+                    int value = blob.cur[i];
+                    if (value > 0) {
+
+                        blob.cur[i] = 0;
+                        blob.volume -= value;
+                        procd = true;
+
+                        if (Dungeon.visible[i]) {
+                            CellEmitter.get(i).burst(Speck.factory(Speck.DISCOVER), 1);
+                        }
+                    }
+
+                }
+            }
+        }
 		
 		boolean heroAffected = PathFinder.distance[Dungeon.hero.pos] < Integer.MAX_VALUE;
 		

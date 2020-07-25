@@ -17,7 +17,6 @@
  */
 package com.pdextended.pixeldungeonextended.sprites;
 
-import com.pdextended.noosa.MovieClip;
 import com.pdextended.noosa.TextureFilm;
 import com.pdextended.noosa.particles.Emitter;
 import com.pdextended.noosa.particles.PixelParticle;

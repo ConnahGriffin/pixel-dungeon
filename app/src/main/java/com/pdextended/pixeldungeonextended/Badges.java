@@ -184,10 +184,10 @@ public class Badges {
 		HashSet<Badge> badges = new HashSet<>();
 		
 		String[] names = bundle.getStringArray( BADGES );
-		for (int i=0; i < names.length; i++) {
+		for (String name : names) {
 			try {
-				badges.add( Badge.valueOf( names[i] ) );
-			} catch (Exception e) {
+				badges.add(Badge.valueOf(name));
+			} catch (Exception ignored) {
 			}
 		}
 	
@@ -241,7 +241,7 @@ public class Badges {
 				Bundle.write( bundle, output );
 				output.close();
 				saveNeeded = false;
-			} catch (IOException e) {
+			} catch (IOException ignored) {
 				
 			}
 		}

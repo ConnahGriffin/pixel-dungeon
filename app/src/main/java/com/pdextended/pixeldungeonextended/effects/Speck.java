@@ -17,8 +17,9 @@
  */
 package com.pdextended.pixeldungeonextended.effects;
 
+import java.lang.Math;
+
 import android.annotation.SuppressLint;
-import android.util.FloatMath;
 import android.util.SparseArray;
 
 import com.pdextended.noosa.Game;
@@ -121,7 +122,9 @@ public class Speck extends Image {
 		switch (type) {
 			
 		case HEALING:
-			speed.set( 0, -20 );
+
+			case UP:
+				speed.set( 0, -20 );
 			lifespan = 1f;
 			break;
 			
@@ -180,13 +183,8 @@ public class Speck extends Image {
 		case QUESTION:
 			lifespan = 0.8f;
 			break;
-			
-		case UP:
-			speed.set( 0, -20 );
-			lifespan = 1f;
-			break;
-			
-		case SCREAM:
+
+			case SCREAM:
 			lifespan = 0.9f;
 			break;
 			
@@ -323,7 +321,9 @@ public class Speck extends Image {
 				
 			case KIT:		
 			case MASTERY:
-				am = 1 - p * p;
+
+				case NOTE:
+					am = 1 - p * p;
 				break;
 				
 			case EVOKE:	
@@ -360,14 +360,12 @@ public class Speck extends Image {
 				break;
 				
 			case ROCK:
-				am = p < 0.2f ? p * 5 : 1 ;
+
+				case BUBBLE:
+					am = p < 0.2f ? p * 5 : 1 ;
 				break;
-				
-			case NOTE:
-				am = 1 - p * p;
-				break;
-				
-			case WOOL:
+
+				case WOOL:
 				scale.set( 1 - p );
 				break;
 				
@@ -381,12 +379,8 @@ public class Speck extends Image {
 				scale.set( 1 - p );
 				am = 1 - p * p;
 				break;
-				
-			case BUBBLE:
-				am = p < 0.2f ? p * 5 : 1;
-				break;
-				
-			case STEAM:
+
+				case STEAM:
 			case TOXIC:
 			case PARALYSIS:
 			case CONFUSION:

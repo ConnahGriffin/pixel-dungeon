@@ -74,11 +74,11 @@ public class HallsLevel extends RegularLevel {
 			if (map[i] == Terrain.EMPTY) { 
 				
 				int count = 0;
-				for (int j=0; j < NEIGHBOURS8.length; j++) {
-					if ((Terrain.flags[map[i + NEIGHBOURS8[j]]] & Terrain.PASSABLE) > 0) {
-						count++;
-					}
-				}
+                for (int value : NEIGHBOURS8) {
+                    if ((Terrain.flags[map[i + value]] & Terrain.PASSABLE) > 0) {
+                        count++;
+                    }
+                }
 				
 				if (Random.Int( 80 ) < count) {
 					map[i] = Terrain.EMPTY_DECO;

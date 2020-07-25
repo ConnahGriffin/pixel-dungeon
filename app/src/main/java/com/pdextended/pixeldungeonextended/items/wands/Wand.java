@@ -250,7 +250,7 @@ public abstract class Wand extends KindOfWeapon {
 		
 		String status = status();
 		if (status != null) {
-			sb.append( " (" + status +  ")" );
+			sb.append(" (").append(status).append(")");
 		}
 		
 		if (isBroken()) {

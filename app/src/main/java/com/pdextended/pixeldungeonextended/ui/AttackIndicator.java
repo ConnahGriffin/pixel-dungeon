@@ -128,7 +128,7 @@ public class AttackIndicator extends Tag {
 			sprite.y = y + (height - sprite.height()) / 2;
 			PixelScene.align( sprite );
 			
-		} catch (Exception e) {
+		} catch (Exception ignored) {
 		}
 	}
 	

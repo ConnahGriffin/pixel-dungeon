@@ -63,21 +63,21 @@ public class ShopPainter extends Painter {
 		Item[] range = range();
 		
 		int pos = xy2p( room, room.entrance() ) + (per - range.length) / 2;
-		for (int i=0; i < range.length; i++) {
-			
-			Point xy = p2xy( room, (pos + per) % per );
-			int cell = xy.x + xy.y * Level.WIDTH;
-			
-			if (level.heaps.get( cell ) != null) {
-				do {
-					cell = room.random();
-				} while (level.heaps.get( cell ) != null);
-			}
-			
-			level.drop( range[i], cell ).type = Heap.Type.FOR_SALE;
-			
-			pos++;
-		}
+        for (Item item : range) {
+
+            Point xy = p2xy(room, (pos + per) % per);
+            int cell = xy.x + xy.y * Level.WIDTH;
+
+            if (level.heaps.get(cell) != null) {
+                do {
+                    cell = room.random();
+                } while (level.heaps.get(cell) != null);
+            }
+
+            level.drop(item, cell).type = Heap.Type.FOR_SALE;
+
+            pos++;
+        }
 		
 		placeShopkeeper( level, room );
 		

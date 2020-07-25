@@ -84,7 +84,7 @@ public class WandOfDisintegration extends Wand {
 		}
 		
 		int lvl = level + chars.size();
-		int dmgMin = lvl;
+		@SuppressWarnings("UnnecessaryLocalVariable") int dmgMin = lvl;
 		int dmgMax = 8 + lvl * lvl / 3;
 		for (Char ch : chars) {
 			ch.damage( Random.NormalIntRange( dmgMin, dmgMax ), this );

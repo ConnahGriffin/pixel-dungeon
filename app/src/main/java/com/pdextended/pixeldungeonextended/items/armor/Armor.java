@@ -219,9 +219,7 @@ public class Armor extends EquipableItem {
 		StringBuilder info = new StringBuilder( desc() );
 		
 		if (levelKnown) {
-			info.append(
-				"\n\nThis " + name + " provides damage absorption up to " +
-				"" + Math.max( DR(), 0 ) + " points per attack. " );
+			info.append("\n\nThis ").append(name).append(" provides damage absorption up to ").append(Math.max(DR(), 0)).append(" points per attack. ");
 			
 			if (STR > Dungeon.hero.STR()) {
 				
@@ -237,9 +235,7 @@ public class Armor extends EquipableItem {
 				
 			}
 		} else {
-			info.append( 
-				"\n\nTypical " + name + " provides damage absorption up to " + typicalDR() + " points per attack " +
-				" and requires " + typicalSTR() + " points of strength. " );
+			info.append("\n\nTypical ").append(name).append(" provides damage absorption up to ").append(typicalDR()).append(" points per attack ").append(" and requires ").append(typicalSTR()).append(" points of strength. ");
 			if (typicalSTR() > Dungeon.hero.STR()) {
 				info.append( "Probably this armor is too heavy for you. " );
 			}
@@ -250,11 +246,10 @@ public class Armor extends EquipableItem {
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append( "\n\nYou are wearing the " + name + 
-				(cursed ? ", and because it is cursed, you are powerless to remove it." : ".") ); 
+			info.append("\n\nYou are wearing the ").append(name).append(cursed ? ", and because it is cursed, you are powerless to remove it." : ".");
 		} else {
 			if (cursedKnown && cursed) {
-				info.append( "\n\nYou can feel a malevolent magic lurking within the " + name + "." );
+				info.append("\n\nYou can feel a malevolent magic lurking within the ").append(name).append(".");
 			}
 		}
 		

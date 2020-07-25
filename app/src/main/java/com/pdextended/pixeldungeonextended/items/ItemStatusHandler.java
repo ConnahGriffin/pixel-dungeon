@@ -43,18 +43,16 @@ public class ItemStatusHandler<T extends Item> {
 		
 		ArrayList<String> labelsLeft = new ArrayList<>(Arrays.asList(allLabels));
 		ArrayList<Integer> imagesLeft = new ArrayList<>(Arrays.asList(allImages));
-		
-		for (int i=0; i < items.length; i++) {
-			
-			Class<? extends T> item = items[i];
-			
-			int index = Random.Int( labelsLeft.size() );
-			
-			labels.put( item, labelsLeft.get( index ) );
-			labelsLeft.remove( index );
-			
-			images.put( item, imagesLeft.get( index ) );
-			imagesLeft.remove( index );
+
+		for (Class<? extends T> item : items) {
+
+			int index = Random.Int(labelsLeft.size());
+
+			labels.put(item, labelsLeft.get(index));
+			labelsLeft.remove(index);
+
+			images.put(item, imagesLeft.get(index));
+			imagesLeft.remove(index);
 		}
 	}
 	
@@ -74,11 +72,11 @@ public class ItemStatusHandler<T extends Item> {
 	private static final String PFX_KNOWN	= "_known";
 	
 	public void save( Bundle bundle ) {
-		for (int i=0; i < items.length; i++) {
-			String itemName = items[i].toString();
-			bundle.put( itemName + PFX_IMAGE, images.get( items[i] ) );
-			bundle.put( itemName + PFX_LABEL, labels.get( items[i] ) );
-			bundle.put( itemName + PFX_KNOWN, known.contains( items[i] ) );
+		for (Class<? extends T> item : items) {
+			String itemName = item.toString();
+			bundle.put(itemName + PFX_IMAGE, images.get(item));
+			bundle.put(itemName + PFX_LABEL, labels.get(item));
+			bundle.put(itemName + PFX_KNOWN, known.contains(item));
 		}
 	}
 	
@@ -86,36 +84,35 @@ public class ItemStatusHandler<T extends Item> {
 		
 		ArrayList<String> labelsLeft = new ArrayList<>(Arrays.asList(allLabels));
 		ArrayList<Integer> imagesLeft = new ArrayList<>(Arrays.asList(allImages));
-		
-		for (int i=0; i < items.length; i++) {
-			
-			Class<? extends T> item = items[i];
+
+		for (Class<? extends T> item : items) {
+
 			String itemName = item.toString();
-			
-			if (bundle.contains( itemName + PFX_LABEL )) {
-				
-				String label = bundle.getString( itemName + PFX_LABEL );
-				labels.put( item, label );
-				labelsLeft.remove( label );
-				
-				Integer image = bundle.getInt( itemName + PFX_IMAGE );
-				images.put( item, image );
-				imagesLeft.remove( image );
-				
-				if (bundle.getBoolean( itemName + PFX_KNOWN )) {
-					known.add( item );
+
+			if (bundle.contains(itemName + PFX_LABEL)) {
+
+				String label = bundle.getString(itemName + PFX_LABEL);
+				labels.put(item, label);
+				labelsLeft.remove(label);
+
+				Integer image = bundle.getInt(itemName + PFX_IMAGE);
+				images.put(item, image);
+				imagesLeft.remove(image);
+
+				if (bundle.getBoolean(itemName + PFX_KNOWN)) {
+					known.add(item);
 				}
-				
+
 			} else {
-				
-				int index = Random.Int( labelsLeft.size() );
-				
-				labels.put( item, labelsLeft.get( index ) );
-				labelsLeft.remove( index );
-				
-				images.put( item, imagesLeft.get( index ) );
-				imagesLeft.remove( index );
-				
+
+				int index = Random.Int(labelsLeft.size());
+
+				labels.put(item, labelsLeft.get(index));
+				labelsLeft.remove(index);
+
+				images.put(item, imagesLeft.get(index));
+				imagesLeft.remove(index);
+
 			}
 		}
 	}
@@ -137,9 +134,9 @@ public class ItemStatusHandler<T extends Item> {
 		known.add( (Class<? extends T>)item.getClass() );
 		
 		if (known.size() == items.length - 1) {
-			for (int i=0; i < items.length; i++) {
-				if (!known.contains( items[i] )) {
-					known.add( items[i] );
+			for (Class<? extends T> aClass : items) {
+				if (!known.contains(aClass)) {
+					known.add(aClass);
 					break;
 				}
 			}

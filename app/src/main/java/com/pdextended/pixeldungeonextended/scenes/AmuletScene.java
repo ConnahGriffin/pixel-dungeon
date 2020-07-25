@@ -92,8 +92,7 @@ public class AmuletScene extends PixelScene {
 			amulet.y = align( (Camera.main.height - height) / 2 );
 			
 			btnExit.setPos( (Camera.main.width - btnExit.width()) / 2, amulet.y + amulet.height + LARGE_GAP );
-			btnStay.setPos( btnExit.left(), btnExit.bottom() + SMALL_GAP );
-			
+
 		} else {
 			height = amulet.height + LARGE_GAP + text.height() + LARGE_GAP + btnExit.height() + SMALL_GAP + btnStay.height();
 			
@@ -104,8 +103,8 @@ public class AmuletScene extends PixelScene {
 			text.y = amulet.y + amulet.height + LARGE_GAP;
 			
 			btnExit.setPos( (Camera.main.width - btnExit.width()) / 2, text.y + text.height() + LARGE_GAP );
-			btnStay.setPos( btnExit.left(), btnExit.bottom() + SMALL_GAP );
 		}
+		btnStay.setPos( btnExit.left(), btnExit.bottom() + SMALL_GAP );
 
 		new Flare( 8, 48 ).color( 0xFFDDBB, true ).show( amulet, 0 ).angularSpeed = +30;
 		

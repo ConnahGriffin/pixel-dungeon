@@ -479,8 +479,8 @@ public abstract class Level implements Bundlable {
 			
 		} else {
 			boolean flood = false;
-			for (int j=0; j < NEIGHBOURS4.length; j++) {
-				if (water[pos + NEIGHBOURS4[j]]) {
+			for (int i : NEIGHBOURS4) {
+				if (water[pos + i]) {
 					flood = true;
 					break;
 				}
@@ -497,9 +497,9 @@ public abstract class Level implements Bundlable {
 		for (int i=0; i < LENGTH; i++) {
 			
 			boolean d = false;
-			
-			for (int j=0; j < NEIGHBOURS9.length; j++) {
-				int n = i + NEIGHBOURS9[j];
+
+			for (int item : NEIGHBOURS9) {
+				int n = i + item;
 				if (n >= 0 && n < LENGTH && map[n] != Terrain.WALL && map[n] != Terrain.WALL_DECO) {
 					d = true;
 					break;
@@ -508,9 +508,9 @@ public abstract class Level implements Bundlable {
 			
 			if (d) {
 				d = false;
-				
-				for (int j=0; j < NEIGHBOURS9.length; j++) {
-					int n = i + NEIGHBOURS9[j];
+
+				for (int value : NEIGHBOURS9) {
+					int n = i + value;
 					if (n >= 0 && n < LENGTH && !pit[n]) {
 						d = true;
 						break;
@@ -631,57 +631,50 @@ public abstract class Level implements Bundlable {
 		switch (map[cell]) {
 		
 		case Terrain.SECRET_TOXIC_TRAP:
-			GLog.i( TXT_HIDDEN_PLATE_CLICKS );
+
+			case Terrain.SECRET_SUMMONING_TRAP:
+
+			case Terrain.SECRET_GRIPPING_TRAP:
+
+			case Terrain.SECRET_LIGHTNING_TRAP:
+
+			case Terrain.SECRET_ALARM_TRAP:
+
+			case Terrain.SECRET_POISON_TRAP:
+
+			case Terrain.SECRET_PARALYTIC_TRAP:
+
+			case Terrain.SECRET_FIRE_TRAP:
+				GLog.i( TXT_HIDDEN_PLATE_CLICKS );
 		case Terrain.TOXIC_TRAP:
 			trap = true;
 			ToxicTrap.trigger( cell, ch );
 			break;
-			
-		case Terrain.SECRET_FIRE_TRAP:
-			GLog.i( TXT_HIDDEN_PLATE_CLICKS );
-		case Terrain.FIRE_TRAP:
+			case Terrain.FIRE_TRAP:
 			trap = true;
 			FireTrap.trigger( cell, ch );
 			break;
-			
-		case Terrain.SECRET_PARALYTIC_TRAP:
-			GLog.i( TXT_HIDDEN_PLATE_CLICKS );
-		case Terrain.PARALYTIC_TRAP:
+			case Terrain.PARALYTIC_TRAP:
 			trap = true;
 			ParalyticTrap.trigger( cell,  ch );
 			break;
-			
-		case Terrain.SECRET_POISON_TRAP:
-			GLog.i( TXT_HIDDEN_PLATE_CLICKS );
-		case Terrain.POISON_TRAP:
+			case Terrain.POISON_TRAP:
 			trap = true;
 			PoisonTrap.trigger( cell, ch );
 			break;
-			
-		case Terrain.SECRET_ALARM_TRAP:
-			GLog.i( TXT_HIDDEN_PLATE_CLICKS );
-		case Terrain.ALARM_TRAP:
+			case Terrain.ALARM_TRAP:
 			trap = true;
 			AlarmTrap.trigger( cell, ch );
 			break;
-			
-		case Terrain.SECRET_LIGHTNING_TRAP:
-			GLog.i( TXT_HIDDEN_PLATE_CLICKS );
-		case Terrain.LIGHTNING_TRAP:
+			case Terrain.LIGHTNING_TRAP:
 			trap = true;
 			LightningTrap.trigger( cell, ch );
 			break;
-			
-		case Terrain.SECRET_GRIPPING_TRAP:
-			GLog.i( TXT_HIDDEN_PLATE_CLICKS );
-		case Terrain.GRIPPING_TRAP:
+			case Terrain.GRIPPING_TRAP:
 			trap = true;
 			GrippingTrap.trigger( cell, ch );
 			break;
-			
-		case Terrain.SECRET_SUMMONING_TRAP:
-			GLog.i( TXT_HIDDEN_PLATE_CLICKS );
-		case Terrain.SUMMONING_TRAP:
+			case Terrain.SUMMONING_TRAP:
 			trap = true;
 			SummoningTrap.trigger( cell, ch );
 			break;
