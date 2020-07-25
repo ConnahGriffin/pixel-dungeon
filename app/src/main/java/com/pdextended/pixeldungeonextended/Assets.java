@@ -27,7 +27,7 @@ public class Assets {
 	public static final String BADGES	= "badges.png";
 	public static final String LOCKED	= "locked_badge.png";
 	public static final String AMULET	= "amulet.png";
-	public static final String ALMANAC	= "pixelBOOK.png";
+	public static final String ALMANAC	= "Almanac.png";
 	
 	public static final String CHROME	= "chrome.png";
 	public static final String ICONS	= "icons.png";

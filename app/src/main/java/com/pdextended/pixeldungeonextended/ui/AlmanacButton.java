@@ -21,6 +21,8 @@ import com.pdextended.noosa.Image;
 import com.pdextended.noosa.audio.Sample;
 import com.pdextended.noosa.ui.Button;
 import com.pdextended.pixeldungeonextended.Assets;
+import com.pdextended.pixeldungeonextended.PixelDungeonExtended;
+import com.pdextended.pixeldungeonextended.scenes.AlmanacScene;
 import com.pdextended.pixeldungeonextended.windows.WndSettings;
 
 public class AlmanacButton extends Button {
@@ -29,7 +31,7 @@ public class AlmanacButton extends Button {
 
 	public AlmanacButton() {
 		super();
-		
+
 		width = image.width;
 		height = image.height;
 	}
@@ -37,8 +39,7 @@ public class AlmanacButton extends Button {
 	@Override
 	protected void createChildren() {
 		super.createChildren();
-		
-		image = Icons.ALMANAC.get();
+		image = new Image( Assets.ALMANAC );
 		add( image );
 	}
 	
@@ -63,6 +64,6 @@ public class AlmanacButton extends Button {
 	
 	@Override
 	protected void onClick() {
-		parent.add( new WndSettings( false ) );
+		PixelDungeonExtended.switchNoFade( AlmanacScene.class );
 	}
 }

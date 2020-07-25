@@ -33,6 +33,7 @@ import com.pdextended.pixeldungeonextended.BuildConfig;
 import com.pdextended.pixeldungeonextended.PixelDungeonExtended;
 import com.pdextended.pixeldungeonextended.effects.BannerSprites;
 import com.pdextended.pixeldungeonextended.effects.Fireball;
+import com.pdextended.pixeldungeonextended.ui.AlmanacButton;
 import com.pdextended.pixeldungeonextended.ui.Archs;
 import com.pdextended.pixeldungeonextended.ui.ExitButton;
 import com.pdextended.pixeldungeonextended.ui.PrefsButton;
@@ -123,13 +124,13 @@ public class TitleScene extends PixelScene {
 		};
 		add( btnHighscores );
 
-        DashboardItem btnAlmanac = new DashboardItem( TXT_ALMANAC, 4 ) {
+        /*DashboardItem btnAlmanac = new DashboardItem( TXT_ALMANAC, 4 ) {
             @Override
             protected void onClick() { PixelDungeonExtended.switchNoFade( AlmanacScene.class );
             }
         };
 		add( btnAlmanac );
-		
+		*/
 		BitmapText version = new BitmapText( "v " + Game.version, font1x );
 		version.measure();
 		version.hardlight( 0x888888 );
@@ -140,6 +141,10 @@ public class TitleScene extends PixelScene {
 		PrefsButton btnPrefs = new PrefsButton();
 		btnPrefs.setPos( 0, 0 );
 		add( btnPrefs );
+
+		AlmanacButton btnAlmanac = new AlmanacButton();
+		btnAlmanac.setPos( 0, btnPrefs.height() + btnAlmanac.height() );
+		add( btnAlmanac );
 		
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos( w - btnExit.width(), 0 );
@@ -157,7 +162,6 @@ public class TitleScene extends PixelScene {
 			btnPlay			.setPos( w / 2 - btnPlay.width(), btnAbout.top() - DashboardItem.SIZE );
 			btnHighscores	.setPos( w / 2, btnPlay.top() );
 		}
-		btnAlmanac			.setPos( 0, btnPrefs.height() + btnAlmanac.height() );
 
 		fadeIn();
 	}
