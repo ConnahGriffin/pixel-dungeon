@@ -205,7 +205,7 @@ public class PixelDungeonExtended extends Game {
 	}
 	
 	/*
-	 * ---> Prefernces
+	 * ---> Preferences
 	 */
 	
 	public static void landscape( boolean value ) {

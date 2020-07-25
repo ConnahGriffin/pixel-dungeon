@@ -206,7 +206,8 @@ public class PixelScene extends Scene {
 		scale /= zoom;
 	}
 	
-	public static BitmapText createText( float size ) {
+	public static BitmapText createText( float size )
+	{
 		return createText( null, size );
 	}
 	
@@ -270,7 +271,7 @@ public class PixelScene extends Scene {
 		Game.scene().add( banner );
 	}
 
-	//TODO: Create a badge banner sorting for the items
+	//TODO: Create an item sorter
 	public static void showItem(Almanac.Item_Index items) {
 
     }

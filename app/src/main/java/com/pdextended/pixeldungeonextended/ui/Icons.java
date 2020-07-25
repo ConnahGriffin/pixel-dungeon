@@ -27,6 +27,7 @@ public enum Icons {
 	BUSY,
 	COMPASS, 
 	PREFS,
+	ALMANAC,
 	WARNING,
 	TARGET,
 	WATA,
@@ -69,7 +70,8 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 0, 8, 7, 13 ) );
 			break;
 		case PREFS:
-			icon.frame( icon.texture.uvRect( 30, 0, 46, 16 ) );
+		case ALMANAC:
+				icon.frame( icon.texture.uvRect( 30, 0, 46, 16 ) );
 			break;
 		case WARNING:
 			icon.frame( icon.texture.uvRect( 46, 0, 58, 12 ) );

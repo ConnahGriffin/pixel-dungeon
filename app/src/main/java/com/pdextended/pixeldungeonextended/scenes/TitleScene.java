@@ -151,14 +151,13 @@ public class TitleScene extends PixelScene {
 			btnBadges		.setPos( w / 2, y );
 			btnPlay			.setPos( btnHighscores.left() - btnPlay.width(), y );
 			btnAbout		.setPos( btnBadges.right(), y );
-			btnAlmanac		.setPos( 0, btnPrefs.height() + btnAlmanac.height() );
 		} else {
-			btnBadges.setPos( w / 2 - btnBadges.width(), (h + height) / 2 - DashboardItem.SIZE );
-			btnAbout.setPos( w / 2, (h + height) / 2 - DashboardItem.SIZE );
-			btnPlay.setPos( w / 2 - btnPlay.width(), btnAbout.top() - DashboardItem.SIZE );
-			btnHighscores.setPos( w / 2, btnPlay.top() );
-			btnAlmanac		.setPos( 0, btnPrefs.height() + btnAlmanac.height() );
+			btnBadges		.setPos( w / 2 - btnBadges.width(), (h + height) / 2 - DashboardItem.SIZE );
+			btnAbout		.setPos( w / 2, (h + height) / 2 - DashboardItem.SIZE );
+			btnPlay			.setPos( w / 2 - btnPlay.width(), btnAbout.top() - DashboardItem.SIZE );
+			btnHighscores	.setPos( w / 2, btnPlay.top() );
 		}
+		btnAlmanac			.setPos( 0, btnPrefs.height() + btnAlmanac.height() );
 
 		fadeIn();
 	}
