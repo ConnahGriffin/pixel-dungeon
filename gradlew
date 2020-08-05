@@ -10,6 +10,7 @@
 DEFAULT_JVM_OPTS=""
 
 APP_NAME="Gradle"
+# shellcheck disable=SC2006
 APP_BASE_NAME=`basename "$0"`
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
@@ -30,6 +31,7 @@ die ( ) {
 cygwin=false
 msys=false
 darwin=false
+# shellcheck disable=SC2006
 case "`uname`" in
   CYGWIN* )
     cygwin=true
@@ -47,11 +49,14 @@ esac
 PRG="$0"
 # Need this for relative symlinks.
 while [ -h "$PRG" ] ; do
+    # shellcheck disable=SC2006
     ls=`ls -ld "$PRG"`
+    # shellcheck disable=SC2006
     link=`expr "$ls" : '.*-> \(.*\)$'`
     if expr "$link" : '/.*' > /dev/null; then
         PRG="$link"
     else
+        # shellcheck disable=SC2006
         PRG=`dirname "$PRG"`"/$link"
     fi
 done
