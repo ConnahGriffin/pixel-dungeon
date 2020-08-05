@@ -120,6 +120,7 @@ public class PixelDungeonExtended extends Game {
 		com.pdextended.utils.Bundle.addAlias(
 			com.pdextended.pixeldungeonextended.items.wands.WandOfReach.class,
 			"com.pdextended.pixeldungeonextended.items.wands.WandOfTelekinesis" );
+		//0-1-alpha pdExtended
 	}
 	
 	@Override

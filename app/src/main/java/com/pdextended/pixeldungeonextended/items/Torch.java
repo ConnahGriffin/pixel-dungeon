@@ -18,6 +18,7 @@
 package com.pdextended.pixeldungeonextended.items;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import com.pdextended.noosa.particles.Emitter;
 import com.pdextended.pixeldungeonextended.actors.buffs.Buff;
@@ -25,6 +26,7 @@ import com.pdextended.pixeldungeonextended.actors.buffs.Light;
 import com.pdextended.pixeldungeonextended.actors.hero.Hero;
 import com.pdextended.pixeldungeonextended.effects.particles.FlameParticle;
 import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
+import com.pdextended.utils.BckCompatibility;
 
 public class Torch extends Item {
 
@@ -50,8 +52,9 @@ public class Torch extends Item {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		
-		if (action == AC_LIGHT) {
+
+		//BckCompatibility is equivalent to Objects.equals(object a, object b)
+		if (BckCompatibility.equals(action, AC_LIGHT)) {
 			
 			hero.spend( TIME_TO_LIGHT );
 			hero.busy();

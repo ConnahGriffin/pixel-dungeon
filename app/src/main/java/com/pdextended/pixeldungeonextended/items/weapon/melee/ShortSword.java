@@ -18,6 +18,7 @@
 package com.pdextended.pixeldungeonextended.items.weapon.melee;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import com.pdextended.noosa.audio.Sample;
 import com.pdextended.pixeldungeonextended.Assets;
@@ -30,6 +31,7 @@ import com.pdextended.pixeldungeonextended.scenes.GameScene;
 import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 import com.pdextended.pixeldungeonextended.utils.GLog;
 import com.pdextended.pixeldungeonextended.windows.WndBag;
+import com.pdextended.utils.BckCompatibility;
 
 public class ShortSword extends MeleeWeapon {
 	
@@ -73,7 +75,8 @@ public class ShortSword extends MeleeWeapon {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action == AC_REFORGE) {
+		//BckCompatibility is equivalent to Objects.equals(object a, object b)
+		if (BckCompatibility.equals(action, AC_REFORGE)) {
 			
 			if (hero.belongings.weapon == this) {
 				equipped = true;

@@ -18,6 +18,7 @@
 package com.pdextended.pixeldungeonextended.items;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import com.pdextended.noosa.Game;
 import com.pdextended.noosa.audio.Sample;
@@ -32,6 +33,7 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSprite.Glowing;
 import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 import com.pdextended.pixeldungeonextended.utils.GLog;
 import com.pdextended.pixeldungeonextended.utils.Utils;
+import com.pdextended.utils.BckCompatibility;
 import com.pdextended.utils.Bundle;
 
 public class LloydsBeacon extends Item {
@@ -97,8 +99,8 @@ public class LloydsBeacon extends Item {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		
-		if (action == AC_SET || action == AC_RETURN) {
+		//BckCompatibility is equivalent to Objects.equals(object a, object b)
+		if (BckCompatibility.equals(action, AC_SET) || BckCompatibility.equals(action, AC_RETURN)) {
 			
 			if (Dungeon.bossLevel()) {
 				hero.spend( LloydsBeacon.TIME_TO_USE );
@@ -113,8 +115,9 @@ public class LloydsBeacon extends Item {
 				}
 			}
 		}
-		
-		if (action == AC_SET) {
+
+		//BckCompatibility is equivalent to Objects.equals(object a, object b)
+		if (BckCompatibility.equals(action, AC_SET)) {
 			
 			returnDepth = Dungeon.depth;
 			returnPos = hero.pos;
@@ -127,7 +130,7 @@ public class LloydsBeacon extends Item {
 			
 			GLog.i( TXT_RETURN );
 			
-		} else if (action == AC_RETURN) {
+		} else if (BckCompatibility.equals(action, AC_RETURN)) {
 			
 			if (returnDepth == Dungeon.depth) {
 				reset();

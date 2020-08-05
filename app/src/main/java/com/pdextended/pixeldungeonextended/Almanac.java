@@ -18,22 +18,6 @@
 package com.pdextended.pixeldungeonextended;
 
 import com.pdextended.noosa.Game;
-import com.pdextended.pixeldungeonextended.actors.mobs.Acidic;
-import com.pdextended.pixeldungeonextended.actors.mobs.Albino;
-import com.pdextended.pixeldungeonextended.actors.mobs.Bandit;
-import com.pdextended.pixeldungeonextended.actors.mobs.Mob;
-import com.pdextended.pixeldungeonextended.actors.mobs.Senior;
-import com.pdextended.pixeldungeonextended.actors.mobs.Shielded;
-import com.pdextended.pixeldungeonextended.items.Item;
-import com.pdextended.pixeldungeonextended.items.bags.ScrollHolder;
-import com.pdextended.pixeldungeonextended.items.bags.SeedPouch;
-import com.pdextended.pixeldungeonextended.items.bags.WandHolster;
-import com.pdextended.pixeldungeonextended.items.potions.Potion;
-import com.pdextended.pixeldungeonextended.items.rings.Ring;
-import com.pdextended.pixeldungeonextended.items.rings.RingOfHaggler;
-import com.pdextended.pixeldungeonextended.items.rings.RingOfThorns;
-import com.pdextended.pixeldungeonextended.items.scrolls.Scroll;
-import com.pdextended.pixeldungeonextended.items.wands.Wand;
 import com.pdextended.pixeldungeonextended.scenes.PixelScene;
 import com.pdextended.pixeldungeonextended.utils.GLog;
 import com.pdextended.utils.Bundle;
@@ -50,22 +34,79 @@ import java.util.List;
 
 public class Almanac {
 
-    public enum Item_Index {;
-        //add new entries here
+    public enum Item_Index {
+        //UNITS
+        //Sewers
+        MARSUPIAL_RAT   ( "Marsupial Rat", "8", "Marsupial rats are aggressive, but rather weak denizens of the sewers. They can be dangerous only in big numbers. ", 0), //add new entries here
+        ALBINO_RAT      ( "Albino Rat", "15", "Marsupial rats are aggressive, but rather weak denizens of the sewers. They can be dangerous only in big numbers. ", 1),
+        GNOLL_SCOUT     ( "Gnoll Scout", "12", "Gnolls are hyena-like humanoids. They dwell in sewers and dungeons, venturing up to raid the surface from time to time. Gnoll scouts are regular members of their pack, they are not as strong as brutes and not as intelligent as shamans.", 2),
+        SEWER_CRAB      ( "Sewer Crab", "15", "These huge crabs are at the top of the food chain in the sewers. They are extremely fast and their thick exoskeleton can withstand heavy blows.", 3),
+        //Prison
+        SKELETON        ( "Skeleton", "25", "Skeletons are composed of corpses bones from unlucky adventurers and inhabitants of the dungeon, animated by emanations of evil magic from the depths below. After they have been damaged enough, they disintegrate in an explosion of bones.", 4),
+        THIEF_BANDIT    ("Crazy Thief/Bandit", "20", "Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, these crazy thieves and bandits have forgotten who they are and why they steal.", 5),
+        SWARM_OF_FLIES  ( "Swarm of Flies", "80", "The deadly swarm of flies buzzes angrily. Every non-magical attack will split it into two smaller but equally dangerous swarms.", 6),
+        GNOLL_SHAMAN    ( "Gnoll Shaman", "18", "The most intelligent gnolls can master shamanistic magic. Gnoll shamans prefer battle spells to compensate for lack of might, not hesitating to use them on those who question their status in a tribe.", 7),
+        //CAVES
+        VAMPIRE_BAT     ( "Vampire Bat", "30","These brisk and tenacious inhabitants of cave domes may defeat much larger opponents by replenishing their health with each successful attack.", 8),
+        BRUTES          ( "Gnoll Brute", "40", "Brutes are the largest, strongest and toughest of all gnolls. When severely wounded, they go berserk, inflicting even more damage to their enemies.", 9),
+        CAVE_SPINNER    ( "Cave Spider", "50", "These greenish furry cave spiders try to avoid direct combat, preferring to wait in the distance while their victim, entangled in the spinner's excreted cobweb, slowly dies from their poisonous bite.", 10),
+        //Dwarven city,
+        FIRE_ELEMENTAL  ( "Fire Elemental","65", "Wandering fire elementals are a byproduct of summoning greater entities. They are too chaotic in their nature to be controlled by even the most powerful demonologist.", 11),
+        DWARF_WARLOCK   ( "Dwarf Warlock", "70","When dwarves' interests have shifted from engineering to arcane arts, warlocks have come to power in the city. They started with elemental magic, but soon switched to demonology and necromancy.", 12),
+        MONK            ( "Dwarf Monk", "70", "These monks are fanatics, who devoted themselves to protecting their city's secrets from all aliens. They don't use any armor or weapons, relying solely on the art of hand-to-hand combat.", 13),
+        GOLEM           ( "Golem", "85", "The Dwarves tried to combine their knowledge of mechanisms with their newfound power of elemental binding. They used spirits of earth as the \"soul\" for the mechanical bodies of golems, which were believed to be most controllable of all. Despite this, the tiniest mistake in the ritual could cause an outbreak.", 14),
+        //Demon halls
+        SUCCUBUS        ( "Succubus", "80", "The succubi are demons that look like seductive (in a slightly gothic way) girls. Using its magic, the succubus can charm a hero, who will become unable to attack anything until the charm wears off.", 15),
+        EVIL_EYE        ( "Evil Eye", "80", "One of this demon's other names is \"orb of hatred\", because when it sees an enemy, it uses its deathgaze recklessly, often ignoring its allies and wounding them.", 16),
+        SCORPIO         ( "Scorpio", "95", "These huge arachnid-like demonic creatures avoid close combat by all means, firing crippling serrated spikes from long distances.", 17),
+        //Special
+        WRAITH          ( "Wraith", "1", "A wraith is a vengeful spirit of a sinner, whose grave or tomb was disturbed. Being an ethereal entity, it is very hard to hit with a regular weapon.", 18),
+        ANIMATED_STATUE ( "Animated Statue", "depthx5+15", "You would think that it's just another ugly statue of this dungeon, but its red glowing eyes give itself away. While the statue itself is made of stone, the <weapon name>, it's wielding, looks real.", 19),
+        GIANT_PIRANHA   ( "Giant Piranha", "depthx5+10", "These carnivorous fish are not natural inhabitants of underground pools. They were bred specifically to protect flooded treasure vaults.", 20),
+        //QUEST_RELATED
+        FETID_RAT       ( "Fetid Rat", "15", "This marsupial rat in much larger, than a regurlar one. It is surrounded by a foul cloud", 21),
+        CURSE_PERSONIFICATION
+                        ( "Curses Personification", "depth*3+10", "This creature resembles the sad ghost, but it swirls with dakness. Its face bears an expression of despair.", 22),
+        //SUMMONED
+        MIMIC           ( "Mimic", "12+levelx4", "Mimics are magical creatures which can take any shape they wish. In dungeons they almost always choose a shape of a treasure chest, because they know how to beckon an adventurer", 23),
+        UNDEAD_DWARF    ( "Undead Dwarf", "28", "These undead dwarves, risen by the will of the King of Dwarves, were members of his court. They appear as skeletons with a stunning amount of facial hair", 24),
+        ROTTING_FIST    ( "Rotting Fist", "300", "The embodiment of pestilence, Yog-Dzewa never pulls his punches.", 25),
+        Burning_FIST    ( "Burning Fist", "200","The most dangerous of the arcane elements, fire. Yog-Dzewa doesn't pull his punches", 26),
+        LARVAE          ( "God's Larva", "25", "Yog-Dzewa is an Old God, a powerful entity from the realms of chaos. A century ago, the ancient dwarves barely won the war against its army of demons, but were unable to kill the god itself. Instead, they then imprisoned it in the halls below their city, believing it to be too weak to rise ever again.", 27),
+        //Bosses
+        GOO             ( "Goo", "80", "Little known about The Goo. It's quite possible that it is not even a creature, but rather a conglomerate of substances from the sewers that gained rudiments of free will.", 28),
+        TENGU           ( "Tengu", "120", "Tengu are members of the ancient assassins clan, which is also called Tengu. These assassins are noted for extensive use of shuriken and traps.", 28),
+        DM_300          ( "DM-300", "200", "This machine was created by the Dwarves several centuries ago. Later, Dwarves started to replace machines with golems, elementals and even demons. Eventually it led their civilization to the decline. The DM-300 and similar machines were typically used for construction and mining, and in some cases, for city defense.", 29),
+        KING_OF_DWARVES ( "King of Dwarves", "300", "The last king of dwarves was known for his deep understanding of processes of life and death. He has persuaded members of his court to participate in a ritual, that should have granted them eternal youthfulness. In the end he was the only one, who got it - and an army of undead as a bonus.", 30),
+        YOG_DZEWA       ( "Yog-Dzewa", "300", " Yog-Dzewa is an Old God, a powerful entity from the realms of chaos. A century ago, the ancient dwarves barely won the war against its army of demons, but were unable to kill the god itself. Instead, they then imprisoned it in the halls below their city, believing it to be too weak to rise ever again.", 31);
+
+        //ITEMS
 
         public final boolean meta;
 
         public final String description;
+        public final String hp;
+        public final String name;
         public final int image;
 
         Item_Index(String description, int image) {
-            this(description, image, false);
+            this(description, image, false, "0", "Unlisted");
         }
 
-        Item_Index(String description, int image, boolean meta) {
+        Item_Index(String name, String hp, String description, int image) {
+            this.description = description;
+            this.hp = hp;
+            this.image = image;
+            this.name = name;
+            meta = false;
+        }
+
+        Item_Index(String description, int image, boolean meta, String hp, String name) {
             this.description = description;
             this.image = image;
             this.meta = meta;
+            this.hp = hp;
+            this.name = name;
         }
 
         Item_Index() {
@@ -123,7 +164,7 @@ public class Almanac {
     public static void loadGlobal() {
         if (global == null) {
             try {
-                InputStream input = Game.instance.openFileInput(ALMANAC_FILE);
+                InputStream input = Game.instance.openFileInput( ALMANAC_FILE );
                 Bundle bundle = Bundle.read(input);
                 input.close();
 
@@ -137,7 +178,7 @@ public class Almanac {
 
     public static void saveGlobal() {
 
-        Bundle bundle = null;
+        Bundle bundle;
 
         if (saveNeeded) {
 
@@ -153,6 +194,13 @@ public class Almanac {
 
             }
         }
+    }
+
+    public static void validateUnitKills() {
+        Item_Index almanac = null;
+
+
+
     }
 
     private static void displayBadge(Item_Index almanac) {

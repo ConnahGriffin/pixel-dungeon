@@ -30,6 +30,7 @@ import com.pdextended.pixeldungeonextended.Assets;
 import com.pdextended.utils.PointF;
 import com.pdextended.utils.Random;
 
+@SuppressWarnings("DuplicateExpressions")
 public class Speck extends Image {
 
 	public static final int HEALING		= 0;
@@ -316,7 +317,7 @@ public class Speck extends Image {
 			case STAR:
 			case FORGE:
 				scale.set( 1 - p );
-				am = p < 0.2f ? p * 5f : (1 - p) * 1.25f;
+				am = 	p < 0.2f ? p * 5f : (1 - p) * 1.25f;
 				break;
 				
 			case KIT:		

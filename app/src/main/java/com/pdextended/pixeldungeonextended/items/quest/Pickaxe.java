@@ -18,6 +18,7 @@
 package com.pdextended.pixeldungeonextended.items.quest;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import com.pdextended.noosa.audio.Sample;
 import com.pdextended.pixeldungeonextended.Assets;
@@ -36,6 +37,7 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 import com.pdextended.pixeldungeonextended.sprites.ItemSprite.Glowing;
 import com.pdextended.pixeldungeonextended.ui.BuffIndicator;
 import com.pdextended.pixeldungeonextended.utils.GLog;
+import com.pdextended.utils.BckCompatibility;
 import com.pdextended.utils.Bundle;
 import com.pdextended.utils.Callback;
 
@@ -81,8 +83,9 @@ public class Pickaxe extends Weapon {
 	
 	@Override
 	public void execute( final Hero hero, String action ) {
-		
-		if (action == AC_MINE) {
+
+		//BckCompatibility is equivalent to Objects.equals(object a, object b)
+		if (BckCompatibility.equals(action, AC_MINE)) {
 			
 			if (Dungeon.depth < 11 || Dungeon.depth > 15) {
 				GLog.w( TXT_NO_VEIN );

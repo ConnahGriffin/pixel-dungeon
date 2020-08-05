@@ -24,7 +24,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.HashSet;
 
 import com.pdextended.noosa.Game;
@@ -248,8 +248,9 @@ public class Dungeon {
 	}
 	
 	public static void switchLevel( final Level level, int pos ) {
+		Calendar rightnow = Calendar.getInstance();
 		
-		nightMode = new Date().getHours() < 7;
+		nightMode = rightnow.get(Calendar.HOUR_OF_DAY) < 7 || rightnow.get(Calendar.HOUR_OF_DAY) > 19;
 		
 		Dungeon.level = level;
 		Actor.init();

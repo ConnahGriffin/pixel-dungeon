@@ -208,7 +208,7 @@ public class Yog extends Mob {
 			super.die( cause );
 			fistsCount--;
 		}
-		
+
 		@Override
 		public int attackSkill( Char target ) {
 			return 36;
@@ -247,7 +247,7 @@ public class Yog extends Mob {
 		
 		@Override
 		public String description() {
-			return TXT_DESC;
+			return "The embodiment of pestilence, Yog-Dzewa never pulls his punches.";
 				
 		}
 		
@@ -364,7 +364,7 @@ public class Yog extends Mob {
 		
 		@Override
 		public String description() {
-			return TXT_DESC;
+			return "The most dangerous of the arcane elements, fire. Yog-Dzewa doesn't pull his punch";
 				
 		}
 		

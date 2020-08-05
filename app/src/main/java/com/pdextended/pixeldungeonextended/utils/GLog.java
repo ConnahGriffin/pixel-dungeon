@@ -17,7 +17,7 @@
  */
 package com.pdextended.pixeldungeonextended.utils;
 
-import com.pdextended.utils.Signal;
+import 	com.pdextended.utils.Signal;
 
 import android.util.Log;
 

@@ -17,11 +17,15 @@
  */
 package com.pdextended.pixeldungeonextended.items.armor;
 
+import android.os.Build;
+
 import java.util.ArrayList;
+import java.util.Objects;
 
 import com.pdextended.pixeldungeonextended.actors.hero.Hero;
 import com.pdextended.pixeldungeonextended.utils.GLog;
 import com.pdextended.utils.Bundle;
+import com.pdextended.utils.BckCompatibility;
 
 abstract public class ClassArmor extends Armor {
 	
@@ -95,8 +99,9 @@ abstract public class ClassArmor extends Armor {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action == special()) {
-			
+		//BckCompatibility is equivalent to Objects.equals(object a, object b)
+		if (BckCompatibility.equals(action, special())) {
+
 			if (hero.HP < 3) {
 				GLog.w( TXT_LOW_HEALTH );
 			} else if (!isEquipped( hero )) {
@@ -105,9 +110,9 @@ abstract public class ClassArmor extends Armor {
 				curUser = hero;
 				doSpecial();
 			}
-			
-		} else {	
-			super.execute( hero, action );		
+
+		} else {
+			super.execute( hero, action );
 		}
 	}
 	

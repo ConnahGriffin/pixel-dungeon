@@ -34,6 +34,7 @@ import com.pdextended.pixeldungeonextended.Almanac;
 import com.pdextended.pixeldungeonextended.Assets;
 import com.pdextended.pixeldungeonextended.Badges;
 import com.pdextended.pixeldungeonextended.PixelDungeonExtended;
+import com.pdextended.pixeldungeonextended.effects.AlmanacBanner;
 import com.pdextended.pixeldungeonextended.effects.BadgeBanner;
 import com.pdextended.utils.BitmapCache;
 
@@ -272,8 +273,13 @@ public class PixelScene extends Scene {
 	}
 
 	//TODO: Create an item sorter
-	public static void showItem(Almanac.Item_Index items) {
-
+	//probably doesn't work as it should rn,is a work in progress
+	public static void showItem(Almanac.Item_Index almanac) {
+		AlmanacBanner banner = AlmanacBanner.show( almanac.image );
+		banner.camera = uiCamera;
+		banner.x = align( banner.camera, (banner.camera.width - banner.width) / 2 );
+		banner.y = align( banner.camera, (banner.camera.height - banner.height) / 3 );
+		Game.scene().add( banner );
     }
 	
 	protected static class Fader extends ColorBlock {

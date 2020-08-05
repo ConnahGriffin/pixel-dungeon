@@ -24,7 +24,7 @@ import com.pdextended.noosa.Image;
 import com.pdextended.noosa.audio.Music;
 import com.pdextended.noosa.audio.Sample;
 import com.pdextended.noosa.ui.Button;
-import com.pdextended.pixeldungeonextended.Assets;
+import com.pdextended.pixeldungeonextended.Assets  ;
 import com.pdextended.pixeldungeonextended.Almanac;
 import com.pdextended.pixeldungeonextended.PixelDungeonExtended;
 import com.pdextended.pixeldungeonextended.effects.AlmanacBanner;
@@ -113,6 +113,11 @@ public class AlmanacScene extends PixelScene {
 
 	    super.destroy();
 	}
+
+    @Override
+    protected void onBackPressed() {
+        PixelDungeonExtended.switchNoFade( TitleScene.class );
+    }
 
     private static class AlmanacButton extends Button {
 

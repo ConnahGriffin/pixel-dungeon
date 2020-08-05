@@ -18,6 +18,7 @@
 package com.pdextended.pixeldungeonextended.items;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import com.pdextended.noosa.BitmapTextMultiline;
 import com.pdextended.noosa.audio.Sample;
@@ -33,6 +34,7 @@ import com.pdextended.pixeldungeonextended.utils.GLog;
 import com.pdextended.pixeldungeonextended.utils.Utils;
 import com.pdextended.pixeldungeonextended.windows.IconTitle;
 import com.pdextended.pixeldungeonextended.windows.WndBag;
+import com.pdextended.utils.BckCompatibility;
 
 public class Weightstone extends Item {
 	
@@ -60,7 +62,9 @@ public class Weightstone extends Item {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
-		if (action == AC_APPLY) {
+
+		//BckCompatibility is equivalent to Objects.equals(object a, object b)
+		if (BckCompatibility.equals(action, AC_APPLY)) {
 
 			curUser = hero;
 			GameScene.selectItem( itemSelector, WndBag.Mode.WEAPON, TXT_SELECT_WEAPON );
