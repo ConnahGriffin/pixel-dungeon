@@ -18,7 +18,6 @@
 package com.pdextended.pixeldungeonextended.items.weapon.melee;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 import com.pdextended.noosa.audio.Sample;
 import com.pdextended.pixeldungeonextended.Assets;

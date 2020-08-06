@@ -17,10 +17,7 @@
  */
 package com.pdextended.pixeldungeonextended.items.armor;
 
-import android.os.Build;
-
 import java.util.ArrayList;
-import java.util.Objects;
 
 import com.pdextended.pixeldungeonextended.actors.hero.Hero;
 import com.pdextended.pixeldungeonextended.utils.GLog;

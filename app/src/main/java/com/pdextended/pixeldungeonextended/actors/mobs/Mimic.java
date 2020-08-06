@@ -142,7 +142,7 @@ public class Mimic extends Mob {
 				ch.pos = newPos;
 				// FIXME
 				if (ch instanceof Mob) {
-					Dungeon.level.mobPress( (Mob)ch );
+					Dungeon.level.mobPress( (Mob) ch );
 				} else {
 					Dungeon.level.press( newPos, ch );
 				}

@@ -171,7 +171,8 @@ public class Belongings implements Iterable<Item> {
 				if (((Key)item).depth == depth) {
 					item.detachAll( backpack );
 				}
-			} else if (item.unique) {
+			} else //noinspection StatementWithEmptyBody
+				if (item.unique) {
 				// Keep unique items
 			} else if (!item.isEquipped( owner )) {
 				item.detachAll( backpack );

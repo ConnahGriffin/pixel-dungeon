@@ -129,7 +129,8 @@ public abstract class Char extends Actor {
 		}
 	}
 	
-	public boolean attack( Char enemy ) {
+	@SuppressWarnings("StatementWithEmptyBody")
+	public boolean attack(Char enemy ) {
 		
 		boolean visibleFight = Dungeon.visible[pos] || Dungeon.visible[enemy.pos];
 		

@@ -30,7 +30,6 @@ import com.pdextended.pixeldungeonextended.Assets;
 import com.pdextended.utils.PointF;
 import com.pdextended.utils.Random;
 
-@SuppressWarnings("DuplicateExpressions")
 public class Speck extends Image {
 
 	public static final int HEALING		= 0;

@@ -18,7 +18,6 @@
 package com.pdextended.pixeldungeonextended.items;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 import com.pdextended.noosa.Game;
 import com.pdextended.noosa.audio.Sample;
