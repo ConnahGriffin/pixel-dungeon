@@ -22,8 +22,9 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 public class Longsword extends MeleeWeapon {
 	
 	{
-		name = "longsword";
-		image = ItemSpriteSheet.LONG_SWORD;
+		name 	= "longsword";
+		image 	= ItemSpriteSheet.LONG_SWORD;
+		id		= 4;
 	}
 	
 	public Longsword() {

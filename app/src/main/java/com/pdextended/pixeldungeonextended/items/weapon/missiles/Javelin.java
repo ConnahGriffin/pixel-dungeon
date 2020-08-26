@@ -27,10 +27,11 @@ import com.pdextended.utils.Random;
 public class Javelin extends MissileWeapon {
 
 	{
-		name = "javelin";
-		image = ItemSpriteSheet.JAVELIN;
+		name 	= "javelin";
+		image 	= ItemSpriteSheet.JAVELIN;
+		id		= 15;
 		
-		STR = 15;
+		STR 	= 15;
 	}
 	
 	public Javelin() {

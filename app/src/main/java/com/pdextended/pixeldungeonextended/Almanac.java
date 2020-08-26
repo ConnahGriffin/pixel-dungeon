@@ -58,7 +58,8 @@ public class Almanac {
         //Demon halls
         SUCCUBUS        ( "Succubus", "80", "The succubi are demons that look like seductive (in a slightly gothic way) girls. Using its magic, the succubus can charm a hero, who will become unable to attack anything until the charm wears off.", 15),
         EVIL_EYE        ( "Evil Eye", "80", "One of this demon's other names is \"orb of hatred\", because when it sees an enemy, it uses its deathgaze recklessly, often ignoring its allies and wounding them.", 16),
-        SCORPIO         ( "Scorpio", "95", "These huge arachnid-like demonic creatures avoid close combat by all means, firing crippling serrated spikes from long distances.", 17),
+        SCORPIO         ( "Scorpio", "95", "These huge arachnid-like demonic creatures avoid close combat by all means, firing crippling serrated spikes from long distances.", 17),//College
+
         //Special
         WRAITH          ( "Wraith", "1", "A wraith is a vengeful spirit of a sinner, whose grave or tomb was disturbed. Being an ethereal entity, it is very hard to hit with a regular weapon.", 18),
         ANIMATED_STATUE ( "Animated Statue", "depthx5+15", "You would think that it's just another ugly statue of this dungeon, but its red glowing eyes give itself away. While the statue itself is made of stone, the <weapon name>, it's wielding, looks real.", 19),
@@ -78,9 +79,28 @@ public class Almanac {
         TENGU           ( "Tengu", "120", "Tengu are members of the ancient assassins clan, which is also called Tengu. These assassins are noted for extensive use of shuriken and traps.", 28),
         DM_300          ( "DM-300", "200", "This machine was created by the Dwarves several centuries ago. Later, Dwarves started to replace machines with golems, elementals and even demons. Eventually it led their civilization to the decline. The DM-300 and similar machines were typically used for construction and mining, and in some cases, for city defense.", 29),
         KING_OF_DWARVES ( "King of Dwarves", "300", "The last king of dwarves was known for his deep understanding of processes of life and death. He has persuaded members of his court to participate in a ritual, that should have granted them eternal youthfulness. In the end he was the only one, who got it - and an army of undead as a bonus.", 30),
-        YOG_DZEWA       ( "Yog-Dzewa", "300", " Yog-Dzewa is an Old God, a powerful entity from the realms of chaos. A century ago, the ancient dwarves barely won the war against its army of demons, but were unable to kill the god itself. Instead, they then imprisoned it in the halls below their city, believing it to be too weak to rise ever again.", 31);
+        YOG_DZEWA       ( "Yog-Dzewa", "300", " Yog-Dzewa is an Old God, a powerful entity from the realms of chaos. A century ago, the ancient dwarves barely won the war against its army of demons, but were unable to kill the god itself. Instead, they then imprisoned it in the halls below their city, believing it to be too weak to rise ever again.", 31),
+        HEADMASTER      ("Headmaster", "350", "The most powerful being in existence known within the College realm, abuse of power may happen but none would know if there's none to report it", 32),
 
         //ITEMS
+        //Tier-1
+        SHORT_SWORD     ( "Short sword", "", "It is indeed quite short, just a few inches longer,[sic] than a dagger. This short sword is a tier-1 melee weapon. Its average damage is 6 points per hit.", 33),
+        DAGGER          ( "Dagger", "", "A simple iron dagger with a well worn wooden handle. This Dagger is a tier-1 melee weapon. Its typical average damage is 4 points per hit; and it usually requires 10 points of strength. This is a rather accurate weapon.", 33),
+        WEAPON          {},
+        Weapon2         {},
+        WEAPON3         {},
+        Weapon4         {},
+        Weapon5         {},
+        Weapon6         {},
+        Weapon7         {},
+        Weapon8         {},
+        Weapon          {},
+        Weapon22        {},
+        Weapon21        {},
+        Weapon23        {},
+        Weapon24        {},
+        Weapon25        {}
+        ;
 
         public final boolean meta;
 
@@ -88,6 +108,7 @@ public class Almanac {
         public final String hp;
         public final String name;
         public final int image;
+
 
         Item_Index(String description, int image) {
             this(description, image, false, "0", "Unlisted");
@@ -153,24 +174,24 @@ public class Almanac {
         bundle.put(ALMANAC, names);
     }
 
-    public static void loadLocal(Bundle bundle) {
-        local = restore(bundle);
+    public static void loadLocal( Bundle bundle ) {
+        local = restore( bundle );
     }
 
-    public static void saveLocal(Bundle bundle) {
-        store(bundle, local);
+    public static void saveLocal( Bundle bundle ) {
+        store( bundle, local );
     }
 
     public static void loadGlobal() {
         if (global == null) {
             try {
                 InputStream input = Game.instance.openFileInput( ALMANAC_FILE );
-                Bundle bundle = Bundle.read(input);
+                Bundle bundle = Bundle.read( input );
                 input.close();
 
-                global = restore(bundle);
+                global = restore( bundle );
 
-            } catch (IOException e) {
+            } catch ( IOException e) {
                 global = new HashSet<>();
             }
         }
@@ -183,10 +204,10 @@ public class Almanac {
         if (saveNeeded) {
 
             bundle = new Bundle();
-            store(bundle, global);
+            store( bundle, global );
 
             try {
-                OutputStream output = Game.instance.openFileOutput(ALMANAC_FILE, Game.MODE_PRIVATE);
+                OutputStream output = Game.instance.openFileOutput( ALMANAC_FILE, Game.MODE_PRIVATE );
                 Bundle.write(bundle, output);
                 output.close();
                 saveNeeded = false;
@@ -196,14 +217,42 @@ public class Almanac {
         }
     }
 
-    public static void validateUnitKills() {
+    public static void validateBossKills() {
         Item_Index almanac = null;
 
-
-
+        if(!local.contains( Item_Index.GOO ) && Statistics.deepestFloor >= 6) {
+            almanac = Item_Index.GOO;
+            local.add( almanac);
+            displayIcon( almanac);
+        }
+        if(!local.contains( Item_Index.TENGU ) && Statistics.deepestFloor >= 11) {
+            almanac = Item_Index.TENGU;
+            local.add( almanac );
+            displayIcon( almanac );
+        }
+        if(!local.contains( Item_Index.DM_300 ) && Statistics.deepestFloor >= 16) {
+            almanac = Item_Index.DM_300;
+            local.add( almanac );
+            displayIcon( almanac );
+        }
+        if(!local.contains( Item_Index.KING_OF_DWARVES ) && Statistics.deepestFloor >= 21) {
+            almanac = Item_Index.KING_OF_DWARVES;
+            local.add( almanac );
+            displayIcon( almanac );
+        }
+        if(!local.contains( Item_Index.YOG_DZEWA ) && Statistics.deepestFloor >= 26) {
+            almanac = Item_Index.YOG_DZEWA;
+            local.add( almanac );
+            displayIcon( almanac );
+        }
+        if(!local.contains( Item_Index.HEADMASTER ) && Statistics.amuletObtained) {
+            almanac = Item_Index.HEADMASTER;
+            local.add( almanac );
+            displayIcon( almanac );
+        }
     }
 
-    private static void displayBadge(Item_Index almanac) {
+    private static void displayIcon(Item_Index almanac) {
 
         if (almanac == null) {
             return;

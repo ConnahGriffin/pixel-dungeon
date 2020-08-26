@@ -22,8 +22,9 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 public class Spear extends MeleeWeapon {
 
 	{
-		name = "spear";
-		image = ItemSpriteSheet.SPEAR;
+		name 	= "spear";
+		image 	= ItemSpriteSheet.SPEAR;
+		id		= 8;
 	}
 	
 	public Spear() {

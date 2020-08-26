@@ -39,6 +39,7 @@ public class WandOfFlock extends Wand {
 
 	{
 		name = "Wand of Flock";
+		id	 = 23;
 	}
 	
 	@Override

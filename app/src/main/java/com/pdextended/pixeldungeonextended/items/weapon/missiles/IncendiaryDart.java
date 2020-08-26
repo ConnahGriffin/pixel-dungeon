@@ -33,10 +33,11 @@ import com.pdextended.utils.Random;
 public class IncendiaryDart extends MissileWeapon {
 
 	{
-		name = "incendiary dart";
-		image = ItemSpriteSheet.INCENDIARY_DART;
-		
-		STR = 12;
+		name 	= "incendiary dart";
+		image 	= ItemSpriteSheet.INCENDIARY_DART;
+		id		= 14;
+
+		STR 	= 12;
 	}
 	
 	public IncendiaryDart() {

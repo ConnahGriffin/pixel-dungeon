@@ -43,7 +43,6 @@ public class TitleScene extends PixelScene {
 	private static final String TXT_HIGHSCORES	= "Rankings";
 	private static final String TXT_BADGES		= "Badges";
 	private static final String TXT_ABOUT		= "About";
-	private static final String TXT_ALMANAC		= "Almanac";
 	
 	@Override
 	public void create() {
@@ -122,14 +121,6 @@ public class TitleScene extends PixelScene {
 			}
 		};
 		add( btnHighscores );
-
-        /*DashboardItem btnAlmanac = new DashboardItem( TXT_ALMANAC, 4 ) {
-            @Override
-            protected void onClick() { PixelDungeonExtended.switchNoFade( AlmanacScene.class );
-            }
-        };
-		add( btnAlmanac );
-		*/
 		BitmapText version = new BitmapText( "v " + Game.version, font1x );
 		version.measure();
 		version.hardlight( 0x888888 );
@@ -186,11 +177,7 @@ public class TitleScene extends PixelScene {
             image.frame(image.texture.uvRect(index * IMAGE_SIZE, 0, (index + 1) * IMAGE_SIZE, IMAGE_SIZE));
             this.label.text(text);
             this.label.measure();
-            if (!text.equals(TXT_ALMANAC)) {
-                setSize(SIZE, SIZE);
-            } else {
-                setSize(30, 10);
-            }
+            setSize(SIZE, SIZE);
         }
 		
 		@Override

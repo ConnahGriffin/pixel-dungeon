@@ -22,8 +22,9 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 public class Glaive extends MeleeWeapon {
 
 	{
-		name = "glaive";
-		image = ItemSpriteSheet.GLAIVE;
+		name 	= "glaive";
+		image 	= ItemSpriteSheet.GLAIVE;
+		id		= 2;
 	}
 	
 	public Glaive() {

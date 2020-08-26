@@ -37,6 +37,7 @@ public class WandOfDisintegration extends Wand {
 
 	{
 		name = "Wand of Disintegration";
+		id	 = 21;
 		hitChars = false;
 	}
 	

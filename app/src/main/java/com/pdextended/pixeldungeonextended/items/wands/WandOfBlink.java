@@ -32,6 +32,7 @@ public class WandOfBlink extends Wand {
 
 	{
 		name = "Wand of Blink";
+		id	 = 20;
 	}
 	
 	@Override

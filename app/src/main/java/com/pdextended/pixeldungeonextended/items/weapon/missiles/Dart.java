@@ -24,8 +24,9 @@ import com.pdextended.utils.Random;
 public class Dart extends MissileWeapon {
 
 	{
-		name = "dart";
-		image = ItemSpriteSheet.DART;
+		name 	= "dart";
+		image 	= ItemSpriteSheet.DART;
+		id		= 13;
 	}
 	
 	public Dart() {

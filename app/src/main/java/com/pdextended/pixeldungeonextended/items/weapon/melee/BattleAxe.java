@@ -22,8 +22,9 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 public class BattleAxe extends MeleeWeapon {
 
 	{
-		name = "battle axe";
-		image = ItemSpriteSheet.BATTLE_AXE;
+		name 	= "battle axe";
+		image 	= ItemSpriteSheet.BATTLE_AXE;
+		id		= 0;
 	}
 	
 	public BattleAxe() {

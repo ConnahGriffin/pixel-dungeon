@@ -24,12 +24,13 @@ import com.pdextended.utils.Random;
 public class Shuriken extends MissileWeapon {
 
 	{
-		name = "shuriken";
-		image = ItemSpriteSheet.SHURIKEN;
+		name 	= "shuriken";
+		image 	= ItemSpriteSheet.SHURIKEN;
+		id		= 16;
 		
-		STR = 13;
+		STR 	= 13;
 		
-		DLY = 0.5f;
+		DLY 	= 0.5f;
 	}
 	
 	public Shuriken() {

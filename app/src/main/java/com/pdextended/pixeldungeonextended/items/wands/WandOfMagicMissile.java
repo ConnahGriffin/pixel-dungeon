@@ -51,6 +51,7 @@ public class WandOfMagicMissile extends Wand {
 	
 	{
 		name = "Wand of Magic Missile";
+		id	 = 25;
 		image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
 	}
 	

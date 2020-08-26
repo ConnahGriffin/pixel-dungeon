@@ -46,6 +46,7 @@ public class WandOfReach extends Wand {
 	
 	{
 		name = "Wand of Reach";
+		id	 = 27;
 		hitChars = false;
 	}
 	

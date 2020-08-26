@@ -20,7 +20,7 @@ package com.pdextended.pixeldungeonextended.actors.hero;
 import com.pdextended.pixeldungeonextended.actors.Char;
 import com.pdextended.pixeldungeonextended.actors.mobs.npcs.NPC;
 
-public class HeroAction {
+public class 	HeroAction {
 	
 	public int dst;
 	

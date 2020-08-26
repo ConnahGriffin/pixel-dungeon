@@ -34,6 +34,7 @@ public class WandOfRegrowth extends Wand {
 
 	{
 		name = "Wand of Regrowth";
+		id	 = 28;
 	}
 	
 	@Override

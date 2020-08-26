@@ -22,8 +22,9 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 public class Mace extends MeleeWeapon {
 
 	{
-		name = "mace";
-		image = ItemSpriteSheet.MACE;
+		name 	= "mace";
+		image 	= ItemSpriteSheet.MACE;
+		id		= 5;
 	}
 	
 	public Mace() {

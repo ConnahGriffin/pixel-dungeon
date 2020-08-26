@@ -22,8 +22,9 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 public class Dagger extends MeleeWeapon {
 	
 	{
-		name = "dagger";
-		image = ItemSpriteSheet.DAGGER;
+		name 	= "dagger";
+		image 	= ItemSpriteSheet.DAGGER;
+		id		= 1;
 	}
 	
 	public Dagger() {

@@ -54,11 +54,11 @@ public class AlmanacBanner extends Image {
 		
 		this.index = index;
 		
-		frame( atlas.get( index ) );
+		frame( atlas.get( index ));
 		origin.set( width / 2, height / 2 );
 		
-		alpha( 0 );
-		scale.set( 2 * DEFAULT_SCALE );
+		alpha(0);
+		scale.set(2 * DEFAULT_SCALE);
 		
 		state = State.FADE_IN;
 		time = FADE_IN_TIME;
@@ -74,35 +74,35 @@ public class AlmanacBanner extends Image {
 		if (time >= 0) {
 			
 			switch (state) {
-			case FADE_IN:
-				float p = time / FADE_IN_TIME;
-				scale.set( (1 + p) * DEFAULT_SCALE );
-				alpha( 1 - p );
-				break;
-			case STATIC:
-				break;
-			case FADE_OUT:
-				alpha( time /  FADE_OUT_TIME );
-				break;
+				case FADE_IN:
+					float p = time / FADE_IN_TIME;
+					scale.set((1 + p) * DEFAULT_SCALE);
+					alpha(1 - p);
+					break;
+				case STATIC:
+					break;
+				case FADE_OUT:
+					alpha(time /  FADE_OUT_TIME);
+					break;
 			}
 			
 		} else {
 			
 			switch (state) {
-			case FADE_IN:
-				time = STATIC_TIME;
-				state = State.STATIC;
-				scale.set( DEFAULT_SCALE );
-				alpha( 1 );
-				highlight( this, index );
-				break;
-			case STATIC:
-				time = FADE_OUT_TIME;
-				state = State.FADE_OUT;
-				break;
-			case FADE_OUT:
-				killAndErase();
-				break;
+				case FADE_IN:
+					time = STATIC_TIME;
+					state = State.STATIC;
+					scale.set( DEFAULT_SCALE );
+					alpha(1);
+					highlight(this, index);
+					break;
+				case STATIC:
+					time = FADE_OUT_TIME;
+					state = State.FADE_OUT;
+					break;
+				case FADE_OUT:
+					killAndErase();
+					break;
 			}
 				
 		}
@@ -121,34 +121,34 @@ public class AlmanacBanner extends Image {
 		PointF p = new PointF();
 		
 		switch (index) {
-		case 0:
-		case 1:
-		case 2:
-		case 3:
+			case 0:
+			case 1:
+			case 2:
+			case 3:
 			case 21:
 			case 20:
 			case 18:
 				p.offset( 7, 3 );
-			break;
-		case 4:
-		case 5:
-		case 6:
-		case 7:
+				break;
+			case 4:
+			case 5:
+			case 6:
+			case 7:
 			case 36:
 			case 25:
 				p.offset( 6, 5 );
-			break;
-		case 8:
-		case 9:
-		case 10:
-		case 11:
+				break;
+			case 8:
+			case 9:
+			case 10:
+			case 11:
 			case 16:
 				p.offset( 6, 3 );
-			break;
-		case 12:
-		case 13:
-		case 14:
-		case 15:
+				break;
+			case 12:
+			case 13:
+			case 14:
+			case 15:
 			case 59:
 			case 48:
 			case 49:
@@ -157,7 +157,7 @@ public class AlmanacBanner extends Image {
 			case 32:
 			case 33:
 				p.offset( 7, 4 );
-			break;
+				break;
 			case 17:
 			case 40:
 			case 41:
@@ -167,7 +167,7 @@ public class AlmanacBanner extends Image {
 			case 30:
 			case 29:
 				p.offset( 5, 4 );
-			break;
+				break;
 			case 22:
 			case 58:
 			case 35:
@@ -175,11 +175,11 @@ public class AlmanacBanner extends Image {
 			case 27:
 			case 24:
 				p.offset( 6, 4 );
-			break;
-		case 23:
+				break;
+			case 23:
 			case 57:
 				p.offset( 4, 5 );
-			break;
+				break;
 			case 26:
 			case 44:
 			case 45:
@@ -188,10 +188,10 @@ public class AlmanacBanner extends Image {
 			case 38:
 			case 31:
 				p.offset( 5, 5 );
-			break;
+				break;
 			case 28:
-			p.offset( 3, 5 );
-			break;
+				p.offset( 3, 5 );
+				break;
 			case 37:
 			case 60:
 			case 61:
@@ -201,24 +201,24 @@ public class AlmanacBanner extends Image {
 			case 53:
 			case 54:
 			case 55:
-				p.offset( 4, 4 );
-			break;
+				p.offset(4, 4);
+				break;
 			case 56:
-			p.offset( 3, 7 );
-			break;
+				p.offset(3, 7);
+				break;
 		}
 		
 		p.x *= image.scale.x; 
 		p.y *= image.scale.y;
 		p.offset( 
 			-image.origin.x * (image.scale.x - 1), 
-			-image.origin.y * (image.scale.y - 1) );
-		p.offset( image.point() );
+			-image.origin.y * (image.scale.y - 1));
+		p.offset( image.point());
 		
 		Speck star = new Speck();
-		star.reset( 0, p.x, p.y, Speck.DISCOVER );
+		star.reset(0, p.x, p.y, Speck.DISCOVER);
 		star.camera = image.camera();
-		image.parent.add( star );
+		image.parent.add(star);
 	}
 	
 	public static AlmanacBanner show(int image ) {
@@ -229,11 +229,11 @@ public class AlmanacBanner extends Image {
 	}
 	
 	public static Image image( int index ) {
-		Image image = new Image( Assets.ALMANAC );
+		Image image = new Image(Assets.ALMANAC);
 		if (atlas == null) {
-			atlas = new TextureFilm( image.texture, 16, 16 );
+			atlas = new TextureFilm(image.texture, 16, 16);
 		}
-		image.frame( atlas.get( index ) );
+		image.frame(atlas.get(index));
 		return image;
 	}
 }

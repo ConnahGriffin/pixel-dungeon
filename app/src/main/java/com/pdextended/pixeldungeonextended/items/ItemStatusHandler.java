@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import com.pdextended.pixeldungeonextended.Almanac;
 import com.pdextended.utils.Bundle;
 import com.pdextended.utils.Random;
 
@@ -77,6 +78,7 @@ public class ItemStatusHandler<T extends Item> {
 			bundle.put(itemName + PFX_IMAGE, images.get(item));
 			bundle.put(itemName + PFX_LABEL, labels.get(item));
 			bundle.put(itemName + PFX_KNOWN, known.contains(item));
+			Almanac.saveLocal(bundle);
 		}
 	}
 	

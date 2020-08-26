@@ -39,6 +39,7 @@ public class WandOfLightning extends Wand {
 
 	{
 		name = "Wand of Lightning";
+		id	 = 24;
 	}
 	
 	private final ArrayList<Char> affected = new ArrayList<>();

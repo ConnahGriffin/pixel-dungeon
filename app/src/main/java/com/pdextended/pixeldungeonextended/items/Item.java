@@ -20,8 +20,10 @@ package com.pdextended.pixeldungeonextended.items;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 
 import com.pdextended.noosa.audio.Sample;
+import com.pdextended.pixeldungeonextended.Almanac;
 import com.pdextended.pixeldungeonextended.Assets;
 import com.pdextended.pixeldungeonextended.Badges;
 import com.pdextended.pixeldungeonextended.Dungeon;
@@ -74,8 +76,9 @@ public class Item implements Bundlable {
 	
 	public String defaultAction;
 	
-	protected String name = "smth";
-	protected int image = 0;
+	protected String name 	= "smth";
+	protected int image 	= 0;
+	protected int id		= 0;
 	
 
 	public boolean stackable = false;

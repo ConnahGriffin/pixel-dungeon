@@ -22,8 +22,9 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 public class Quarterstaff extends MeleeWeapon {
 
 	{
-		name = "quarterstaff";
-		image = ItemSpriteSheet.QUARTERSTAFF;
+		name 	= "quarterstaff";
+		image 	= ItemSpriteSheet.QUARTERSTAFF;
+		id		= 6;
 	}
 	
 	public Quarterstaff() {

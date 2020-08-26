@@ -31,6 +31,7 @@ public class WandOfSlowness extends Wand {
 
 	{
 		name = "Wand of Slowness";
+		id	 = 29;
 	}
 
 	@Override

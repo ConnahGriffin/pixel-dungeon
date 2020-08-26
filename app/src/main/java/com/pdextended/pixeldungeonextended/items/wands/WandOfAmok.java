@@ -33,6 +33,7 @@ public class WandOfAmok extends Wand {
 
 	{
 		name = "Wand of Amok";
+		id	 = 18;
 	}
 
 	@Override

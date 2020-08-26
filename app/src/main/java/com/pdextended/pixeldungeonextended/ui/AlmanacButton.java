@@ -23,6 +23,11 @@ import com.pdextended.noosa.ui.Button;
 import com.pdextended.pixeldungeonextended.Assets;
 import com.pdextended.pixeldungeonextended.PixelDungeonExtended;
 import com.pdextended.pixeldungeonextended.scenes.AlmanacScene;
+import com.pdextended.pixeldungeonextended.scenes.GameScene;
+import com.pdextended.pixeldungeonextended.scenes.PixelScene;
+import com.pdextended.pixeldungeonextended.scenes.RankingsScene;
+import com.pdextended.pixeldungeonextended.scenes.TitleScene;
+import com.pdextended.pixeldungeonextended.windows.WndAlaman;
 
 public class AlmanacButton extends Button {
 
@@ -62,7 +67,12 @@ public class AlmanacButton extends Button {
 	}
 	
 	@Override
-	protected void onClick() {
-		PixelDungeonExtended.switchNoFade( AlmanacScene.class );
+	//This one is the possible replacement for the section below
+	/*protected void onClick() { GameScene.show( new WndAlaman() );}
+	*/
+	protected  void onClick() {
+		PixelDungeonExtended.switchNoFade( AlmanacScene.class);
 	}
+
+
 }

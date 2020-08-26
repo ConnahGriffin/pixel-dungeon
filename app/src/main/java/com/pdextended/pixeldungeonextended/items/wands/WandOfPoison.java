@@ -31,6 +31,7 @@ public class WandOfPoison extends Wand {
 
 	{
 		name = "Wand of Poison";
+		id	 = 26;
 	}
 	
 	@Override

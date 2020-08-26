@@ -48,8 +48,9 @@ public class ShortSword extends MeleeWeapon {
 	private boolean  equipped;
 	
 	{
-		name = "short sword";
-		image = ItemSpriteSheet.SHORT_SWORD;
+		name 	= "short sword";
+		image 	= ItemSpriteSheet.SHORT_SWORD;
+		id		= 7;
 	}
 	
 	public ShortSword() {

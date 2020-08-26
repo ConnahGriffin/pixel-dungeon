@@ -127,7 +127,7 @@ public class WndTabbed extends Window {
 				bg.size( width, height );
 			}
 		}
-		
+
 		protected void select( boolean value ) {
 			
 			active = !(selected = value);
@@ -143,14 +143,14 @@ public class WndTabbed extends Window {
 			
 			layout();
 		}
-		
+
 		@Override
 		protected void onClick() {	
 			Sample.INSTANCE.play( Assets.SND_CLICK, 0.7f, 0.7f, 1.2f );
 			WndTabbed.this.onClick( this );
 		}
 	}
-	
+
 	protected class LabeledTab extends Tab {
 		
 		private BitmapText btLabel;
@@ -187,6 +187,5 @@ public class WndTabbed extends Window {
 			super.select( value );
 			btLabel.am = selected ? 1.0f : 0.6f;
 		}
-	}	
-
+	}
 }

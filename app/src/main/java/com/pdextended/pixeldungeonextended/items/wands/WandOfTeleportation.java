@@ -31,6 +31,7 @@ public class WandOfTeleportation extends Wand {
 
 	{
 		name = "Wand of Teleportation";
+		id	 = 30;
 	}
 
 	@Override

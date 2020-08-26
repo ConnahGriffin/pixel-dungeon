@@ -41,6 +41,7 @@ public class WandOfFirebolt extends Wand {
 
 	{
 		name = "Wand of Firebolt";
+		id	 = 22;
 	}
 	
 	@Override

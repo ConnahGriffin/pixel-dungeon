@@ -22,8 +22,9 @@ import com.pdextended.pixeldungeonextended.sprites.ItemSpriteSheet;
 public class WarHammer extends MeleeWeapon {
 
 	{
-		name = "war hammer";
-		image = ItemSpriteSheet.WAR_HAMMER;
+		name 	= "war hammer";
+		image 	= ItemSpriteSheet.WAR_HAMMER;
+		id		= 10;
 	}
 	
 	public WarHammer() {

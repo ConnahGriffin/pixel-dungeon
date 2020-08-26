@@ -27,10 +27,11 @@ import com.pdextended.utils.Random;
 public class Tamahawk extends MissileWeapon {
 
 	{
-		name = "tomahawk";
-		image = ItemSpriteSheet.TOMAHAWK;
+		name 	= "tomahawk";
+		image	= ItemSpriteSheet.TOMAHAWK;
+		id		= 17;
 		
-		STR = 17;
+		STR 	= 17;
 	}
 	
 	public Tamahawk() {

@@ -27,10 +27,11 @@ import com.pdextended.pixeldungeonextended.sprites.MissileSprite;
 public class Boomerang extends MissileWeapon {
 
 	{
-		name = "boomerang";
-		image = ItemSpriteSheet.BOOMERANG;
+		name 	= "boomerang";
+		image 	= ItemSpriteSheet.BOOMERANG;
+		id		= 11;
 		
-		STR = 10;
+		STR 	= 10;
 		
 		stackable = false;
 	}

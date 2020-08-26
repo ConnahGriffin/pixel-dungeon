@@ -45,6 +45,7 @@ public class WandOfAvalanche extends Wand {
 	{
 		name = "Wand of Avalanche";
 		hitChars = false;
+		id	 = 19;
 	}
 
 	@Override
