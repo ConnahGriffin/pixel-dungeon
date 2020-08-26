@@ -3,9 +3,9 @@ Pixel Dungeon Extended (originality is all over the place)
 
 This is a fork of Watabou's Pixel Dungeon by mdsimmo's which was the forked by me. This repo was made for a college project,
 The additional features added includes...
-1. Extra levels (work in progress 35% done)
-2. Weapons/Armours (work in progress)
-3. An almanac for mob/items etc (work in progress 70% done)
+1. Extra levels (Done)
+2. Weapons/Armours (Done)
+3. An almanac for mob/items etc (75% Done)
 4. A more visually pleasing display for hunger. (work in progress)
 5. A stat comparison pup-up for items. (work in progress)
 
